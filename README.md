@@ -31,8 +31,8 @@ Participating sites (MU and Utah) will receive two to three distributed queries 
 
 - Delivery date between 01 January 2015 and 31 December 2023 (this is using the DEID date shifted data), which is identified by 
     - DRG: '765','766','767','768','774','775','783','784','785','786', '787','788','796','797','798','805','806','807'
-    - ICD9-PX: '59409', '59514', '59612', '59620'
-    - ICD10-PCS: '10D00Z0','10D00Z1','10D00Z2','10D07Z3', '10D07Z4', '10D07Z5','10D07Z6','10D07Z7','10D07Z8','10E0XZZ'
+    - CPT4: '59409', '59514', '59612', '59620'
+    - ICD10-PCS: '10D00Z0', '10D00Z1','10D00Z2','10D07Z3', '10D07Z4', '10D07Z5','10D07Z6', '10D07Z7', '10D07Z8','10E0XZZ'
 - At least 211 days since the last delivery event in the time period
 - Maternal age between 10 years and 54 years of age
 
