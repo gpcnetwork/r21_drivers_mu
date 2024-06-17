@@ -1,0 +1,506 @@
+summ_var,summ_cat,pat_cnt,evt_cnt
+by_race_source_value|zip_code,Unknown||5,2009,2316
+by_speciality|zip_code,Acute Care Hospital||7,12035,14426
+by_ethnicity_source_value|speciality,Unknown||Critical Access Hospital,276,309
+by_bed_size|zip_code,500-999||0,65435,83744
+by_ethnicity_source_value|zip_code,Unknown||5,2641,3214
+by_race_source_value|bed_size,White||>=1000,475117,602015
+by_segment|zip_code,Health System||0,106307,133261
+by_race_source_value|segment,Other||Hospital,21097,25207
+by_race_source_value|zip_code,Black or African American||1,22690,28573
+by_ethnicity_source_value|zip_code,Non-Hispanic||5,45738,60224
+by_ethnicity_source_value|zip_code,Non-Hispanic||2,57207,69909
+by_race_source_value|zip_code,White||0,65152,82692
+by_speciality|bed_size,Childrens||300-499,643,644
+by_ethnicity_source_value|zip_code,Unknown||0,6515,7482
+by_race_source_value|zip_code,Black or African American||3,25103,31938
+by_segment|bed_size,Hospital||<100,31479,39628
+by_speciality|zip_code,Acute Care Hospital||8,7981,9994
+by_speciality|zip_code,Health System||4,26764,33812
+by_speciality|zip_code,Childrens||9,1,1
+death_ind,1,723,822
+by_race_source_value|ethnicity_source_value,American Indian or Alaska Native||Non-Hispanic,14722,18615
+by_segment|zip_code,Health System||4,30248,37483
+by_segment|zip_code,Hospital||9,39017,45811
+speciality,Childrens,3709,3891
+by_speciality|bed_size,Health System||300-499,44705,56847
+by_race_source_value|bed_size,American Indian or Alaska Native||300-499,1930,2490
+by_segment|zip_code,Hospital||5,6274,8014
+by_bed_size|zip_code,200-299||6,1398,1405
+by_race_source_value|speciality,Asian||Childrens,44,45
+by_speciality|zip_code,Health System||1,64565,83397
+by_race_source_value|ethnicity_source_value,White||Non-Hispanic,617819,789211
+by_ethnicity_source_value|bed_size,,716,927
+by_race_source_value|speciality,American Indian or Alaska Native||Childrens,5,5
+by_race_source_value|bed_size,Black or African American||500-999,40969,51949
+by_race_source_value|segment,American Indian or Alaska Native||Hospital,3337,4125
+by_speciality|zip_code,Critical Access Hospital||8,2582,3201
+by_segment|bed_size,Hospital||100-199,14056,16458
+by_race_source_value|zip_code,Black or African American||6,12432,15446
+by_bed_size|death_ind,500-999||1,233,262
+by_ethnicity_source_value|speciality,Non-Hispanic||Acute Care Hospital,136464,171388
+by_ethnicity_source_value|bed_size,Hispanic or Latino||500-999,64653,79235
+by_race_source_value|speciality,Black or African American||Health System,86321,108209
+by_race_source_value|zip_code,American Indian or Alaska Native||0,324,411
+by_segment|bed_size,Health System||500-999,313267,399336
+by_bed_size|zip_code,500-999||4,17337,21141
+by_speciality|death_ind,Critical Access Hospital||0,16877,21381
+by_race_source_value|segment,Unknown||Hospital,6337,7270
+by_race_source_value|ethnicity_source_value,Unknown||Unknown,12253,13257
+by_ethnicity_source_value|speciality,Hispanic or Latino||Health System,323787,405003
+by_race_source_value|zip_code,Asian||7,3116,3780
+by_race_source_value|bed_size,Other||500-999,36344,43983
+by_race_source_value|bed_size,,129,172
+bed_size,200-299,35414,42155
+by_speciality|zip_code,Critical Access Hospital||3,13,13
+by_death_ind|zip_code,1||7,47,56
+by_race_source_value|bed_size,Asian||>=1000,29280,35090
+by_segment|bed_size,Health System||100-199,27085,33596
+by_segment|speciality,Hospital||Childrens,2311,2486
+by_race_source_value|zip_code,Unknown||8,13767,16339
+by_speciality|zip_code,Health System||0,106307,133261
+by_segment|bed_size,Health System||300-499,77166,96964
+by_segment|death_ind,Hospital||1,115,127
+segment,Hospital,180411,222307
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||0,133,166
+by_speciality|zip_code,Childrens||2,1667,1841
+by_ethnicity_source_value|speciality,Unknown||Academic,4575,5310
+by_bed_size|death_ind,<100||0,31445,39590
+by_ethnicity_source_value|bed_size,,78,104
+by_ethnicity_source_value|zip_code,Unknown||7,3226,3937
+by_race_source_value|speciality,American Indian or Alaska Native||Health System,11173,14667
+by_ethnicity_source_value|zip_code,Non-Hispanic||3,89800,110753
+by_race_source_value|zip_code,Other||9,93593,112628
+by_race_source_value|bed_size,White||100-199,24601,30522
+by_ethnicity_source_value|zip_code,Non-Hispanic||1,90577,116506
+by_race_source_value|segment,American Indian or Alaska Native||Health System,14189,18232
+by_bed_size|zip_code,200-299||5,2665,3554
+race_source_value,Native Hawaiian or Other Pacific Islander,5051,6592
+by_race_source_value|speciality,White||Childrens,2504,2625
+by_ethnicity_source_value|zip_code,Unknown||9,7368,7977
+by_bed_size|zip_code,200-299||9,8899,9865
+zip_code,4,47204,58879
+by_race_source_value|segment,White||Health System,751941,958795
+by_speciality|death_ind,Health System||0,967391,1220334
+by_race_source_value|zip_code,Unknown||7,1753,1992
+by_bed_size|zip_code,200-299||3,13486,16657
+zip_code,0,110466,138452
+by_race_source_value|zip_code,Other||3,3805,4604
+by_race_source_value|speciality,Asian||Health System,37950,45769
+by_race_source_value|ethnicity_source_value,Asian||Hispanic or Latino,894,1069
+by_speciality|zip_code,Health System||8,211798,270773
+by_segment|speciality,Health System||Academic,103998,128955
+by_race_source_value|zip_code,Asian||1,6248,7528
+by_race_source_value|zip_code,Other||5,1412,1789
+by_segment|bed_size,Hospital||500-999,33611,42322
+by_race_source_value|bed_size,American Indian or Alaska Native||200-299,1764,2137
+ethnicity_source_value,Hispanic or Latino,399310,496215
+by_race_source_value|death_ind,Black or African American||1,95,111
+speciality,Academic,117243,144180
+by_speciality|bed_size,Acute Care Hospital||500-999,53830,67298
+by_race_source_value|ethnicity_source_value,Other||Non-Hispanic,40558,49023
+by_ethnicity_source_value|bed_size,Unknown||200-299,1324,1406
+by_ethnicity_source_value|segment,Unknown||Hospital,6561,7376
+by_race_source_value|bed_size,Black or African American||>=1000,56922,70898
+by_bed_size|death_ind,100-199||0,41124,50035
+by_segment|zip_code,Health System||9,261599,322076
+by_race_source_value|zip_code,Other||4,1076,1296
+by_race_source_value|speciality,Other||Childrens,504,536
+by_segment|bed_size,Health System||>=1000,689285,862356
+by_bed_size|zip_code,100-199||1,1555,1859
+by_bed_size|zip_code,<100||4,7611,9711
+by_bed_size|zip_code,>=1000||4,3484,3671
+by_bed_size|zip_code,500-999||7,12035,14426
+by_race_source_value|death_ind,American Indian or Alaska Native||0,17457,22277
+by_race_source_value|death_ind,Other||0,168297,203160
+by_death_ind|zip_code,0||6,129178,167997
+by_race_source_value|bed_size,Asian||500-999,10492,12847
+by_speciality|zip_code,Academic||4,3484,3671
+by_ethnicity_source_value|zip_code,Unknown||3,3834,4191
+by_bed_size|zip_code,<100||8,6894,8766
+by_ethnicity_source_value|bed_size,Unknown||100-199,1291,1375
+by_ethnicity_source_value|zip_code,Non-Hispanic||8,151383,192390
+by_race_source_value|ethnicity_source_value,White||Unknown,15817,18537
+by_race_source_value|speciality,Other||Health System,134331,162513
+by_ethnicity_source_value|segment,Unknown||Health System,33164,37799
+by_race_source_value|zip_code,White||6,97164,128698
+by_segment|bed_size,Health System||200-299,4063,4959
+by_race_source_value|zip_code,Other||6,11488,14122
+by_race_source_value|speciality,White||Health System,664217,849120
+by_speciality|bed_size,,959,1240
+by_ethnicity_source_value|bed_size,Non-Hispanic||300-499,114693,143877
+by_speciality|bed_size,Critical Access Hospital||<100,16894,21400
+by_speciality|zip_code,Health System||5,43325,56819
+by_speciality|zip_code,Acute Care Hospital||4,12547,15530
+by_speciality|zip_code,Critical Access Hospital||7,782,996
+by_bed_size|zip_code,>=1000||3,85885,103650
+by_speciality|death_ind,Acute Care Hospital||1,111,122
+by_race_source_value|bed_size,,570,718
+by_race_source_value|zip_code,Other||7,6200,7440
+by_segment|bed_size,Hospital||300-499,69914,86703
+by_race_source_value|zip_code,American Indian or Alaska Native||6,350,457
+by_ethnicity_source_value|speciality,Hispanic or Latino||Childrens,1050,1093
+by_bed_size|zip_code,<100||7,782,996
+by_ethnicity_source_value|speciality,Non-Hispanic||Childrens,2568,2707
+by_race_source_value|zip_code,White||1,63942,83578
+by_race_source_value|speciality,White||Critical Access Hospital,14051,17917
+by_race_source_value|zip_code,White||4,38387,48670
+bed_size,<100,31479,39628
+by_speciality|zip_code,Critical Access Hospital||9,4247,5299
+by_race_source_value|bed_size,Asian||200-299,546,603
+by_race_source_value|bed_size,Other||<100,964,1203
+zip_code,1,109987,140318
+by_race_source_value|bed_size,Native Hawaiian or Other Pacific Islander||200-299,587,651
+by_ethnicity_source_value|bed_size,Non-Hispanic||200-299,23260,28398
+by_race_source_value|zip_code,Unknown||3,3087,3456
+by_race_source_value|speciality,Native Hawaiian or Other Pacific Islander||Critical Access Hospital,30,41
+by_ethnicity_source_value|death_ind,Hispanic or Latino||0,399174,496064
+by_death_ind|zip_code,1||5,91,107
+by_race_source_value|zip_code,Asian||4,1086,1268
+by_speciality|bed_size,Health System||100-199,27085,33596
+by_bed_size|zip_code,500-999||1,50768,64565
+by_race_source_value|bed_size,Native Hawaiian or Other Pacific Islander||100-199,177,213
+by_race_source_value|zip_code,Other||2,1838,2085
+by_ethnicity_source_value|bed_size,Unknown||300-499,7675,8931
+by_death_ind|zip_code,0||1,109928,140248
+by_death_ind|zip_code,0||8,241251,306799
+by_speciality|zip_code,Health System||9,261599,322076
+by_race_source_value|death_ind,Native Hawaiian or Other Pacific Islander||1,3,4
+by_ethnicity_source_value|bed_size,Unknown||>=1000,15138,17030
+by_speciality|zip_code,Acute Care Hospital||9,34769,40511
+by_bed_size|death_ind,200-299||0,35397,42136
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||2,50,60
+by_race_source_value|speciality,Unknown||Critical Access Hospital,756,899
+by_bed_size|zip_code,100-199||4,1866,2275
+by_bed_size|death_ind,300-499||0,146986,183558
+by_ethnicity_source_value|zip_code,Non-Hispanic||6,111071,145894
+by_ethnicity_source_value|zip_code,Unknown||8,3055,3400
+by_ethnicity_source_value|bed_size,Non-Hispanic||<100,26761,33839
+by_race_source_value|segment,Black or African American||Health System,109280,136743
+zip_code,8,241382,306953
+by_ethnicity_source_value|bed_size,Hispanic or Latino||100-199,18705,22899
+by_speciality|zip_code,Academic||3,13003,15974
+by_segment|zip_code,Hospital||4,16956,21396
+by_race_source_value|zip_code,Black or African American||4,3601,4190
+by_speciality|death_ind,Academic||1,136,148
+ethnicity_source_value,Unknown,39725,45175
+by_ethnicity_source_value|segment,Non-Hispanic||Hospital,134199,167932
+by_segment|zip_code,Hospital||7,12817,15422
+by_bed_size|zip_code,>=1000||9,234514,288480
+bed_size,500-999,346878,441658
+bed_size,300-499,147080,183667
+by_ethnicity_source_value|speciality,Non-Hispanic||Academic,83098,102291
+race_source_value,White,877066,1114611
+by_speciality|zip_code,Acute Care Hospital||3,46774,58412
+by_bed_size|zip_code,300-499||6,29602,38422
+by_race_source_value|zip_code,Black or African American||0,10264,12987
+by_race_source_value|ethnicity_source_value,American Indian or Alaska Native||Hispanic or Latino,1698,2266
+by_bed_size|death_ind,,6,11
+by_race_source_value|speciality,American Indian or Alaska Native||Critical Access Hospital,1090,1352
+by_death_ind|zip_code,0||0,110408,138389
+by_ethnicity_source_value|zip_code,Non-Hispanic||0,78113,99299
+by_ethnicity_source_value|speciality,Unknown||Health System,27298,31038
+by_race_source_value|death_ind,White||0,876585,1114070
+by_race_source_value|bed_size,Native Hawaiian or Other Pacific Islander||>=1000,3165,4291
+by_race_source_value|segment,Asian||Health System,42442,51096
+by_speciality|death_ind,Academic||0,117107,144032
+by_race_source_value|zip_code,American Indian or Alaska Native||1,197,236
+by_bed_size|zip_code,>=1000||1,39032,50818
+by_race_source_value|speciality,Native Hawaiian or Other Pacific Islander||Childrens,3,3
+race_source_value,Other,168344,203216
+by_race_source_value|speciality,Native Hawaiian or Other Pacific Islander||Academic,152,183
+by_race_source_value|death_ind,Asian||0,48978,58806
+by_race_source_value|ethnicity_source_value,Native Hawaiian or Other Pacific Islander||Non-Hispanic,4053,5399
+by_ethnicity_source_value|speciality,Hispanic or Latino||Acute Care Hospital,42591,50605
+by_race_source_value|bed_size,White||<100,25997,32960
+by_race_source_value|segment,Native Hawaiian or Other Pacific Islander||Hospital,1037,1233
+by_race_source_value|bed_size,Asian||300-499,5669,6790
+by_ethnicity_source_value|death_ind,Non-Hispanic||0,852664,1078752
+by_race_source_value|ethnicity_source_value,Unknown||Non-Hispanic,9949,11494
+by_race_source_value|zip_code,Unknown||6,3993,4693
+by_race_source_value|zip_code,Other||8,13892,16939
+by_segment|speciality,Health System||Acute Care Hospital,38579,47224
+by_race_source_value|speciality,American Indian or Alaska Native||Acute Care Hospital,2316,2862
+by_ethnicity_source_value|speciality,Unknown||Childrens,91,91
+zip_code,7,92630,117624
+by_speciality|zip_code,Academic||1,43867,55062
+by_speciality|zip_code,Academic||6,7857,9840
+speciality,Acute Care Hospital,186540,230420
+by_race_source_value|bed_size,Native Hawaiian or Other Pacific Islander||300-499,329,417
+by_ethnicity_source_value|bed_size,Hispanic or Latino||>=1000,276430,345894
+by_race_source_value|bed_size,Black or African American||300-499,20453,25077
+by_race_source_value|bed_size,Other||200-299,1460,1704
+by_bed_size|death_ind,<100||1,34,38
+by_race_source_value|zip_code,White||8,181279,232721
+by_speciality|death_ind,Acute Care Hospital||0,186429,230298
+by_bed_size|death_ind,500-999||0,346645,441396
+by_race_source_value|zip_code,Unknown||1,1967,2204
+by_bed_size|death_ind,300-499||1,94,109
+by_ethnicity_source_value|zip_code,Hispanic or Latino||8,86944,111163
+by_bed_size|zip_code,300-499||9,16719,20138
+by_race_source_value|speciality,Unknown||Acute Care Hospital,6456,7326
+by_speciality|zip_code,Critical Access Hospital||6,1710,2220
+by_segment|death_ind,Health System||1,608,695
+by_race_source_value|zip_code,Asian||0,3589,4478
+by_speciality|zip_code,Academic||2,13245,15225
+by_race_source_value|bed_size,,5,8
+by_ethnicity_source_value|zip_code,Hispanic or Latino||2,2771,3204
+by_bed_size|zip_code,<100||6,4141,5100
+by_ethnicity_source_value|bed_size,Hispanic or Latino||200-299,10830,12351
+by_race_source_value|speciality,American Indian or Alaska Native||Academic,2942,3471
+by_bed_size|zip_code,500-999||5,30644,39750
+by_ethnicity_source_value|death_ind,Unknown||0,39675,45120
+race_source_value,American Indian or Alaska Native,17526,22357
+by_race_source_value|bed_size,,10,10
+by_race_source_value|segment,Other||Health System,147247,178009
+by_ethnicity_source_value|bed_size,Non-Hispanic||100-199,21145,25780
+by_ethnicity_source_value|bed_size,Non-Hispanic||>=1000,397717,499432
+by_race_source_value|ethnicity_source_value,American Indian or Alaska Native||Unknown,1106,1476
+by_bed_size|zip_code,>=1000||0,34178,41292
+by_race_source_value|bed_size,Black or African American||100-199,1541,1782
+by_race_source_value|bed_size,Black or African American||<100,1055,1221
+by_race_source_value|bed_size,Native Hawaiian or Other Pacific Islander||500-999,592,743
+by_race_source_value|zip_code,Asian||9,22095,26317
+by_race_source_value|bed_size,White||200-299,24740,29246
+by_speciality|zip_code,Health System||3,85885,103650
+by_ethnicity_source_value|zip_code,Hispanic or Latino||1,16339,20157
+by_segment|death_ind,Hospital||0,180296,222180
+by_ethnicity_source_value|zip_code,Unknown||1,3071,3655
+by_segment|zip_code,Health System||1,108432,138459
+by_race_source_value|zip_code,Unknown||9,7356,8196
+by_race_source_value|ethnicity_source_value,Native Hawaiian or Other Pacific Islander||Hispanic or Latino,858,1029
+by_speciality|zip_code,Acute Care Hospital||0,3709,4679
+by_segment|zip_code,Hospital||2,18542,21470
+by_ethnicity_source_value|speciality,Non-Hispanic||Health System,616765,784826
+by_race_source_value|speciality,Unknown||Childrens,201,201
+by_race_source_value|zip_code,White||3,110798,134585
+by_bed_size|zip_code,>=1000||2,15577,19939
+bed_size,,959,1240
+by_race_source_value|speciality,Native Hawaiian or Other Pacific Islander||Acute Care Hospital,1063,1254
+by_race_source_value|bed_size,American Indian or Alaska Native||500-999,5598,7024
+by_race_source_value|bed_size,Asian||<100,331,391
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||6,373,473
+by_speciality|zip_code,Childrens||3,643,644
+by_ethnicity_source_value|zip_code,Hispanic or Latino||9,152578,187510
+by_race_source_value|zip_code,Asian||6,3416,4153
+by_race_source_value|speciality,Unknown||Academic,11581,13583
+by_bed_size|zip_code,200-299||2,5297,6245
+zip_code,5,52264,68387
+by_segment|speciality,Hospital||Critical Access Hospital,16894,21400
+by_race_source_value|bed_size,Unknown||500-999,23592,28602
+by_speciality|zip_code,Childrens||6,1398,1405
+by_race_source_value|bed_size,Black or African American||200-299,5139,6574
+by_race_source_value|zip_code,Asian||2,704,799
+by_speciality|zip_code,Acute Care Hospital||5,6238,8275
+by_race_source_value|death_ind,Other||1,47,56
+by_race_source_value|ethnicity_source_value,Other||Hispanic or Latino,120928,146455
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||7,127,152
+by_speciality|death_ind,Childrens||0,3709,3891
+by_segment|zip_code,Health System||6,85899,112186
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||1,82,102
+by_ethnicity_source_value|segment,Hispanic or Latino||Health System,359659,449216
+by_race_source_value|zip_code,Black or African American||7,7020,8862
+by_bed_size|zip_code,500-999||2,12339,15420
+by_race_source_value|zip_code,White||2,48349,59081
+by_race_source_value|segment,Black or African American||Hospital,16928,20930
+by_ethnicity_source_value|zip_code,Hispanic or Latino||7,41250,52836
+by_speciality|zip_code,Critical Access Hospital||5,2701,3293
+by_race_source_value|death_ind,Asian||1,14,16
+by_ethnicity_source_value|zip_code,Hispanic or Latino||3,52684,63749
+by_segment|zip_code,Health System||5,45990,60373
+by_speciality|zip_code,Critical Access Hospital||0,450,512
+by_segment|zip_code,Hospital||6,43317,55856
+by_race_source_value|bed_size,,172,225
+ethnicity_source_value,Non-Hispanic,853201,1079368
+by_race_source_value|segment,Asian||Hospital,6550,7726
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||8,765,1062
+by_death_ind|zip_code,1||2,32,35
+by_race_source_value|zip_code,Black or African American||9,17366,20518
+by_speciality|zip_code,Health System||7,63047,80779
+by_bed_size|zip_code,500-999||3,45224,56512
+by_race_source_value|speciality,Asian||Acute Care Hospital,6857,8102
+by_bed_size|zip_code,500-999||6,94075,123115
+by_speciality|zip_code,Health System||6,76644,100941
+by_segment|zip_code,Hospital||3,27211,34093
+zip_code,2,62153,75523
+by_race_source_value|bed_size,American Indian or Alaska Native||<100,1383,1752
+by_race_source_value|zip_code,Unknown||0,10825,13502
+race_source_value,Unknown,49049,57487
+by_race_source_value|zip_code,Asian||5,1140,1452
+by_race_source_value|bed_size,White||500-999,229291,296510
+by_ethnicity_source_value|speciality,Hispanic or Latino||Academic,29570,36579
+by_race_source_value|death_ind,White||1,481,541
+by_bed_size|zip_code,500-999||8,19021,22985
+by_segment|zip_code,Health System||2,43611,54053
+segment,Health System,1111825,1398451
+by_segment|bed_size,Hospital||200-299,31351,37196
+by_race_source_value|zip_code,Unknown||2,1346,1471
+by_race_source_value|zip_code,American Indian or Alaska Native||8,11616,14542
+by_race_source_value|ethnicity_source_value,White||Hispanic or Latino,243430,306863
+by_speciality|zip_code,Academic||7,16766,21423
+by_bed_size|zip_code,<100||3,1080,1230
+by_race_source_value|ethnicity_source_value,Asian||Non-Hispanic,46930,56432
+by_race_source_value|death_ind,Unknown||0,49035,57473
+by_race_source_value|zip_code,Other||1,14861,18097
+by_race_source_value|bed_size,Asian||100-199,2664,3091
+by_speciality|bed_size,Acute Care Hospital||300-499,71721,89528
+by_bed_size|zip_code,300-499||7,16766,21423
+by_segment|zip_code,Hospital||1,1555,1859
+by_race_source_value|zip_code,Black or African American||8,14984,19215
+by_speciality|bed_size,Health System||500-999,209300,270499
+by_race_source_value|segment,Unknown||Health System,42712,50217
+by_bed_size|zip_code,300-499||1,18632,23076
+by_bed_size|zip_code,300-499||2,28940,33919
+by_segment|zip_code,Health System||3,119107,144600
+by_death_ind|zip_code,0||3,146255,178622
+by_race_source_value|speciality,White||Academic,71988,89590
+by_bed_size|zip_code,>=1000||8,201846,257898
+by_bed_size|death_ind,100-199||1,17,19
+by_speciality|bed_size,Acute Care Hospital||<100,14585,18228
+by_race_source_value|bed_size,White||300-499,96750,122640
+by_race_source_value|bed_size,,56,88
+by_ethnicity_source_value|bed_size,Hispanic or Latino||<100,3902,4873
+by_bed_size|zip_code,300-499||0,8920,11089
+by_race_source_value|ethnicity_source_value,Unknown||Hispanic or Latino,26847,32736
+by_ethnicity_source_value|bed_size,,165,209
+by_segment|speciality,Hospital||Acute Care Hospital,147961,183196
+by_race_source_value|zip_code,Asian||3,2519,2912
+by_bed_size|death_ind,>=1000||1,322,364
+by_bed_size|zip_code,200-299||8,3669,4429
+by_ethnicity_source_value|zip_code,Non-Hispanic||4,40488,51142
+by_speciality|zip_code,Academic||8,19021,22985
+by_segment|zip_code,Health System||7,79813,102202
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||4,64,81
+by_ethnicity_source_value|zip_code,Hispanic or Latino||4,3291,3932
+by_race_source_value|bed_size,Unknown||>=1000,14125,15902
+by_race_source_value|bed_size,Other||>=1000,104119,125619
+by_bed_size|zip_code,<100||0,450,512
+by_race_source_value|zip_code,American Indian or Alaska Native||5,2760,3709
+by_race_source_value|speciality,Other||Academic,12314,14799
+by_speciality|bed_size,Academic||300-499,30011,36648
+by_race_source_value|segment,Native Hawaiian or Other Pacific Islander||Health System,4014,5359
+by_race_source_value|segment,White||Hospital,125125,155816
+by_race_source_value|ethnicity_source_value,Asian||Unknown,1168,1321
+by_race_source_value|ethnicity_source_value,Other||Unknown,6858,7738
+by_race_source_value|speciality,Other||Acute Care Hospital,20569,24569
+total,N,1292236,1620758
+by_ethnicity_source_value|speciality,Hispanic or Latino||Critical Access Hospital,2312,2935
+by_race_source_value|speciality,Black or African American||Critical Access Hospital,140,162
+by_death_ind|zip_code,0||4,47105,58776
+by_bed_size|zip_code,300-499||3,643,644
+by_race_source_value|bed_size,American Indian or Alaska Native||>=1000,6557,8541
+by_ethnicity_source_value|zip_code,Unknown||6,4415,5104
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||3,687,781
+by_race_source_value|speciality,Native Hawaiian or Other Pacific Islander||Health System,3803,5111
+by_ethnicity_source_value|death_ind,Unknown||1,50,55
+by_race_source_value|bed_size,Unknown||100-199,570,595
+by_race_source_value|zip_code,American Indian or Alaska Native||7,334,418
+by_death_ind|zip_code,1||1,59,70
+by_death_ind|zip_code,1||4,99,103
+by_race_source_value|speciality,Unknown||Health System,30055,35478
+by_ethnicity_source_value|zip_code,Unknown||2,2175,2410
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||5,207,292
+by_race_source_value|zip_code,American Indian or Alaska Native||4,44,56
+by_death_ind|zip_code,0||7,92583,117568
+by_speciality|bed_size,Acute Care Hospital||100-199,14056,16458
+by_speciality|bed_size,Academic||500-999,83748,103861
+by_race_source_value|speciality,Other||Critical Access Hospital,626,799
+by_race_source_value|zip_code,Asian||8,5079,6135
+by_bed_size|zip_code,300-499||4,16906,22081
+by_speciality|bed_size,Health System||>=1000,685801,858685
+by_race_source_value|zip_code,American Indian or Alaska Native||9,1505,2014
+by_ethnicity_source_value|bed_size,Hispanic or Latino||300-499,24712,30859
+by_race_source_value|zip_code,American Indian or Alaska Native||2,77,97
+by_segment|speciality,Health System||Childrens,1398,1405
+by_death_ind|zip_code,1||0,58,63
+by_race_source_value|zip_code,Black or African American||2,9789,11930
+by_ethnicity_source_value|zip_code,Non-Hispanic||7,48154,60851
+zip_code,3,146318,178693
+speciality,Critical Access Hospital,16894,21400
+by_race_source_value|bed_size,Other||300-499,14141,17242
+by_ethnicity_source_value|death_ind,Non-Hispanic||1,537,616
+by_race_source_value|zip_code,Native Hawaiian or Other Pacific Islander||9,2563,3423
+by_ethnicity_source_value|zip_code,Hispanic or Latino||6,13730,17044
+by_race_source_value|death_ind,Black or African American||0,126113,157562
+by_race_source_value|zip_code,White||9,156138,194791
+by_ethnicity_source_value|death_ind,Hispanic or Latino||1,136,151
+by_speciality|zip_code,Critical Access Hospital||4,4409,5866
+by_race_source_value|zip_code,Other||0,20179,24216
+by_bed_size|zip_code,,959,1240
+by_bed_size|zip_code,<100||5,6274,8014
+by_ethnicity_source_value|segment,Hispanic or Latino||Hospital,39651,46999
+by_speciality|zip_code,Acute Care Hospital||2,19325,23098
+by_bed_size|zip_code,300-499||8,9952,12875
+by_race_source_value|ethnicity_source_value,Native Hawaiian or Other Pacific Islander||Unknown,140,164
+by_ethnicity_source_value|speciality,Non-Hispanic||Critical Access Hospital,14306,18156
+by_segment|speciality,Health System||Health System,967850,1220867
+by_ethnicity_source_value|segment,Non-Hispanic||Health System,719002,911436
+race_source_value,Black or African American,126208,157673
+by_death_ind|zip_code,1||8,131,154
+by_ethnicity_source_value|zip_code,Hispanic or Latino||5,3885,4949
+by_bed_size|zip_code,>=1000||5,11722,15829
+by_ethnicity_source_value|bed_size,Unknown||<100,816,916
+by_segment|death_ind,Health System||0,1111217,1397756
+by_race_source_value|speciality,Black or African American||Childrens,448,476
+by_death_ind|zip_code,0||5,52173,68280
+by_race_source_value|death_ind,Unknown||1,14,14
+race_source_value,Asian,48992,58822
+by_death_ind|zip_code,1||3,63,71
+by_race_source_value|zip_code,Black or African American||5,2959,4014
+by_segment|zip_code,Health System||8,230819,293758
+by_race_source_value|death_ind,Native Hawaiian or Other Pacific Islander||0,5048,6588
+by_ethnicity_source_value|zip_code,Hispanic or Latino||0,25838,31671
+by_race_source_value|bed_size,Other||100-199,11299,13446
+by_race_source_value|speciality,White||Acute Care Hospital,124306,155359
+by_race_source_value|bed_size,American Indian or Alaska Native||100-199,289,405
+by_speciality|zip_code,Health System||2,27916,35359
+by_race_source_value|zip_code,White||7,74080,94980
+by_segment|zip_code,Hospital||8,10563,13195
+by_race_source_value|bed_size,Unknown||300-499,7808,9011
+by_race_source_value|bed_size,Native Hawaiian or Other Pacific Islander||<100,145,189
+by_segment|speciality,Hospital||Academic,13245,15225
+by_race_source_value|ethnicity_source_value,Black or African American||Hispanic or Latino,4655,5797
+by_death_ind|zip_code,1||6,38,45
+by_bed_size|zip_code,100-199||9,36237,44105
+by_bed_size|death_ind,>=1000||0,688963,861992
+by_speciality|bed_size,Childrens||200-299,3066,3247
+by_race_source_value|speciality,Asian||Academic,3940,4676
+bed_size,>=1000,689285,862356
+zip_code,6,129216,168042
+by_ethnicity_source_value|bed_size,Non-Hispanic||500-999,268909,347115
+by_race_source_value|death_ind,American Indian or Alaska Native||1,69,80
+by_death_ind|zip_code,1||9,105,118
+bed_size,100-199,41141,50054
+by_race_source_value|ethnicity_source_value,Black or African American||Unknown,2383,2682
+by_ethnicity_source_value|zip_code,Non-Hispanic||9,140670,172400
+by_ethnicity_source_value|zip_code,Unknown||4,3425,3805
+by_segment|bed_size,,959,1240
+by_bed_size|zip_code,100-199||0,1483,1815
+zip_code,9,300616,367887
+by_race_source_value|bed_size,Unknown||<100,1604,1912
+by_race_source_value|zip_code,American Indian or Alaska Native||3,319,417
+by_bed_size|zip_code,<100||9,4247,5299
+by_death_ind|zip_code,0||2,62121,75488
+by_ethnicity_source_value|speciality,Unknown||Acute Care Hospital,7485,8427
+by_race_source_value|speciality,Black or African American||Acute Care Hospital,24973,30948
+by_race_source_value|zip_code,White||5,41777,54815
+by_bed_size|death_ind,,953,1229
+by_speciality|death_ind,Health System||1,459,533
+death_ind,0,1291513,1619936
+by_segment|zip_code,Hospital||0,4159,5191
+by_race_source_value|speciality,Asian||Critical Access Hospital,201,230
+by_speciality|bed_size,Acute Care Hospital||200-299,32348,38908
+by_bed_size|zip_code,>=1000||7,63047,80779
+by_speciality|death_ind,Critical Access Hospital||1,17,19
+by_race_source_value|bed_size,Unknown||200-299,1178,1240
+by_speciality|zip_code,Acute Care Hospital||1,1555,1859
+by_speciality|bed_size,Academic||>=1000,3484,3671
+by_bed_size|death_ind,200-299||1,17,19
+by_race_source_value|ethnicity_source_value,Black or African American||Non-Hispanic,119170,149194
+by_race_source_value|bed_size,,17,19
+by_race_source_value|zip_code,Unknown||4,2946,3318
+by_race_source_value|speciality,Black or African American||Academic,14326,17878
+by_death_ind|zip_code,0||9,300511,367769
+speciality,Health System,967850,1220867
+by_ethnicity_source_value|bed_size,Unknown||500-999,13316,15308
+by_speciality|zip_code,Acute Care Hospital||6,41607,53636
