@@ -1,7 +1,7 @@
-﻿SMM_GRP,SMM_DESC,DX_OR_PX,CODE_TYPE,CODE,CODE_DIG ,CODE_DESC
-AMI,Acute myocardial infarction,DX,9,410,0,
-AMI,Acute myocardial infarction,DX,10,I21,0,Acute myocardial infarction
-AMI,Acute myocardial infarction,DX,,I22,0,Subsequent ST elevation (STEMI) and non-ST elevation (NSTEMI) myocardial infarction
-ANE,Aneurysm,DX,9,441,0,
-ANE,Aneurysm,DX,10,I71,0,
-ANE,Aneurysm,DX,10,I79.0,1,
+﻿SMM_GRP,SMM_DESC,DX_OR_PX,CODE_TYPE,CODE,CODE_DIG 
+AMI,Acute myocardial infarction,DX,9,410,0
+AMI,Acute myocardial infarction,DX,10,I21,0
+AMI,Acute myocardial infarction,DX,,I22,0
+ANE,Aneurysm,DX,9,441,0
+ANE,Aneurysm,DX,10,I71,0
+ANE,Aneurysm,DX,10,I79.0,1
