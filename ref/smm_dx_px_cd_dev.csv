@@ -1,7 +1,0 @@
-﻿SMM_GRP,SMM_DESC,DX_OR_PX,CODE_TYPE,CODE,CODE_DIG 
-AMI,Acute myocardial infarction,DX,9,410,0
-AMI,Acute myocardial infarction,DX,10,I21,0
-AMI,Acute myocardial infarction,DX,10,I22,0
-ANE,Aneurysm,DX,9,441,0
-ANE,Aneurysm,DX,10,I71,0
-ANE,Aneurysm,DX,10,I79.0,1
