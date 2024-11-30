@@ -1,0 +1,137 @@
+---
+title: "Result Render"
+format: html
+editor: visual
+---
+
+```{r}
+#| label: load-pkg
+#| message: false
+#| echo: false
+
+pacman::p_load(
+  tidyverse,
+  kableExtra
+)
+
+path_to_res<-file.path(
+  dirname(dirname(getwd())),
+  "res"
+)
+```
+
+## Overall Descriptive Summary
+
+Oracle Cerner Real World EHR Database recently had released their 2024/08 data in both source and OMOP format. Following the same inclusion and exclusion criteria, we identified a total of 2,570,505 pregnancy events among 1,712,026 individuals. We will focus the analysis on the initial pregnancy event.
+
+```{r}
+#| label: init-summary
+#| message: false
+#| echo: false
+
+destbl<-read.csv(file.path(path_to_res,"summ_init_cat.csv"),stringsAsFactors = F) %>%
+  mutate(
+    var_print = recode(
+      var,
+      "agegrp_at_event" = "1.Age",
+      "race_source_value" = "2.Race",
+      "ethnicity_source_value" = "3.Ethnicity",
+      "segment" = "4.Segment",
+      "speciality" = "5.Speciality",
+      "bed_size" = "6.Bed size",
+      "zip_code" = "7.Zip code",
+      "death_ind" = "8.Death indicator",
+      "SMMANY_ind" = "9.SMM indicator"
+    )
+  ) %>%
+  arrange(var_print,cat) %>%
+  mutate(perc = round(prop*100,2)) %>%
+  select(var_print, cat, count, perc)
+
+
+destbl %>%
+  kbl() %>% 
+  collapse_rows(columns = 1:1, valign = "top") %>%
+  kable_paper(full_width = F)
+```
+
+```{r}
+#| label: stratified-summary
+#| message: false
+#| echo: false
+
+strtbl<-read.csv(file.path(path_to_res,"summ_init_cat_smm.csv"),stringsAsFactors = F) %>%
+  mutate(
+    var_print = recode(
+      var,
+      "agegrp_at_event" = "1.Age",
+      "race_source_value" = "2.Race",
+      "ethnicity_source_value" = "3.Ethnicity",
+      "segment" = "4.Segment",
+      "speciality" = "5.Speciality",
+      "bed_size" = "6.Bed size",
+      "zip_code" = "7.Zip code",
+      "death_ind" = "8.Death indicator",
+      "SMMANY_ind" = "9.SMM indicator"
+    )
+  ) %>%
+  arrange(var_print,cat) %>%
+  mutate(perc = round(prop*100,2)) %>%
+  select(var_print, cat, count, perc, SMMANY_IND) %>%
+  pivot_wider(
+    names_from = SMMANY_IND,
+    values_from = c(count,perc)
+  ) %>%
+  select(var_print,cat,count_1,perc_1,count_0,perc_0)
+
+strtbl %>%
+  kbl() %>% 
+  add_header_above(c(" "," ","w/ SMM"=2,"wo/ SMM"=2)) %>%
+  collapse_rows(columns = 1:1, valign = "top") %>%
+  kable_paper(full_width = F)
+```
+
+## Lasso Regression Coefficients
+
+```{r}
+#| label: reg-result
+#| message: false
+#| echo: false
+
+regtbl<-read.csv(file.path(path_to_res,"univar_filter_init.csv"),stringsAsFactors = F) %>%
+  filter(outcome == "SMMANY_ind") %>%
+  left_join(read.csv(file.path(path_to_res,"ohe_map.csv"),stringsAsFactors = F),by=c("var","encoded")) %>%
+  mutate(
+    var_print = recode(
+      var,
+      "age_at_event" = "1a.Age",
+      "agegrp_at_event_ohe" = "1b.Age Group",
+      "race_source_value_ohe" = "2.Race",
+      "ethnicity_source_value_ohe" = "3.Ethnicity",
+      "segment_ohe" = "4.Segment",
+      "speciality_ohe" = "5.Speciality",
+      "bed_size_ohe" = "6.Bed size",
+      "zip_code_ohe" = "7.Zip code",
+      "los" = "8a.LOS",
+      "los1up_ind" = "8b.LOS>1day",
+      "los2up_ind" = "8c.LOS>2day",
+      "los3up_ind" = "8d.LOS>3day",
+      "los4up_ind" = "8e.LOS>4day",
+      "los5up_ind" = "8f.LOS>5day",
+      "los6up_ind" = "8g.LOS>6day",
+      "los7up_ind" = "8h.LOS>7day"
+    ),
+    pval_print = round(pval,4),
+    or_print = round(odds_ratio,3),
+    cf_lb_print = round(conf_lower,3),
+    cf_ub_print = round(conf_upper,3)
+  ) %>%
+  arrange(var_print,cat) %>%
+  select(var_print,cat,or_print,cf_lb_print,cf_ub_print,pval_print)
+
+regtbl %>%
+  kbl() %>% 
+  collapse_rows(columns = 1:1, valign = "top") %>%
+  kable_paper(full_width = F)
+
+```

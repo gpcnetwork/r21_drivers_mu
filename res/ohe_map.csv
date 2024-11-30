@@ -1,0 +1,47 @@
+var,encoded,cat
+race_source_value_ohe,0,Native Hawaiian or Other Pacific Islander
+race_source_value_ohe,1,American Indian or Alaska Native
+race_source_value_ohe,2,Unknown
+race_source_value_ohe,3,Asian
+race_source_value_ohe,4,Black or African American
+race_source_value_ohe,5,Other
+race_source_value_ohe,6,White
+ethnicity_source_value_ohe,0,Unknown
+ethnicity_source_value_ohe,1,Hispanic or Latino
+ethnicity_source_value_ohe,2,Non-Hispanic
+agegrp_at_event_ohe,0,agegrp1
+agegrp_at_event_ohe,1,agegrp7
+agegrp_at_event_ohe,2,agegrp2
+agegrp_at_event_ohe,3,agegrp6
+agegrp_at_event_ohe,4,agegrp3
+agegrp_at_event_ohe,5,agegrp5
+agegrp_at_event_ohe,6,agegrp4
+bed_size_ohe,0,NI
+bed_size_ohe,1,200-299
+bed_size_ohe,2,<100
+bed_size_ohe,3,100-199
+bed_size_ohe,4,300-499
+bed_size_ohe,5,500-999
+bed_size_ohe,6,>=1000
+segment_ohe,0,Hospital
+segment_ohe,1,Health System
+speciality_ohe,0,Childrens
+speciality_ohe,1,Critical Access Hospital
+speciality_ohe,2,Academic
+speciality_ohe,3,Acute Care Hospital
+speciality_ohe,4,Health System
+zip_code_ohe,0,4
+zip_code_ohe,1,2
+zip_code_ohe,2,5
+zip_code_ohe,3,7
+zip_code_ohe,4,0
+zip_code_ohe,5,1
+zip_code_ohe,6,3
+zip_code_ohe,7,6
+zip_code_ohe,8,8
+zip_code_ohe,9,9
+delivery_type_ohe,0,d_v
+delivery_type_ohe,1,d_c
+
+
+
