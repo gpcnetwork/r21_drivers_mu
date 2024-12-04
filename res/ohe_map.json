@@ -15,12 +15,11 @@
   },
  "agegrp_at_event": {
     "0": "agegrp1",
-    "1": "agegrp7",
-    "2": "agegrp2",
-    "3": "agegrp6",
+    "1": "agegrp6",
+    "2": "agegrp5",
+    "3": "agegrp2",
     "4": "agegrp3",
-    "5": "agegrp5",
-    "6": "agegrp4"
+    "5": "agegrp4"
   },
  "bed_size": {
     "0": "NI",

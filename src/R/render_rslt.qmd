@@ -18,11 +18,20 @@ path_to_res<-file.path(
   dirname(dirname(getwd())),
   "res"
 )
+
+denom<-read.csv(file.path(path_to_res,"denom_summ.csv"),stringsAsFactors = F)
 ```
 
 ## Overall Descriptive Summary
 
-Oracle Cerner Real World EHR Database recently had released their 2024/08 data in both source and OMOP format. Following the same inclusion and exclusion criteria, we identified a total of 2,570,505 pregnancy events among 1,712,026 individuals. We will focus the analysis on the initial pregnancy event.
+Oracle Cerner Real World EHR Database recently had released their 2024/08 data in both source and OMOP format. Following the same inclusion and exclusion criteria as below:
+- Delivery events identified by DRG, ICD, or CPT codes defined in: 
+- Delivery events occured between 2051-01-01 and 2023-12-31 (de-identified dates) 
+- At least 211 days since the last delivery event in the time period
+- Maternal age between 10 years and 54 years of age 
+
+We identified a total of `r denom$N_delivery` pregnancy events among `r denom$N_init_delivery` individuals. We will focus the analysis on the `r denom$N_init_delivery` initial pregnancy events. 
+
 
 ```{r}
 #| label: init-summary
@@ -41,19 +50,21 @@ destbl<-read.csv(file.path(path_to_res,"summ_init_cat.csv"),stringsAsFactors = F
       "bed_size" = "6.Bed size",
       "zip_code" = "7.Zip code",
       "death_ind" = "8.Death indicator",
-      "SMMANY_ind" = "9.SMM indicator"
+      "SMMANY_ind" = "9.SMM indicator",
+      "SMMANY90PCT_ind" = "10.SMM indicator (adjusted by 90 percentile LOS)",
+      "BPT_ind" = "11.history of ",
     )
   ) %>%
   arrange(var_print,cat) %>%
   mutate(perc = round(prop*100,2)) %>%
   select(var_print, cat, count, perc)
 
-
 destbl %>%
   kbl() %>% 
   collapse_rows(columns = 1:1, valign = "top") %>%
   kable_paper(full_width = F)
 ```
+
 
 ```{r}
 #| label: stratified-summary

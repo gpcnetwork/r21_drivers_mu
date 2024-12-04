@@ -10,12 +10,11 @@ ethnicity_source_value_ohe,0,Unknown
 ethnicity_source_value_ohe,1,Hispanic or Latino
 ethnicity_source_value_ohe,2,Non-Hispanic
 agegrp_at_event_ohe,0,agegrp1
-agegrp_at_event_ohe,1,agegrp7
-agegrp_at_event_ohe,2,agegrp2
-agegrp_at_event_ohe,3,agegrp6
+agegrp_at_event_ohe,1,agegrp6
+agegrp_at_event_ohe,2,agegrp5
+agegrp_at_event_ohe,3,agegrp2
 agegrp_at_event_ohe,4,agegrp3
-agegrp_at_event_ohe,5,agegrp5
-agegrp_at_event_ohe,6,agegrp4
+agegrp_at_event_ohe,5,agegrp4
 bed_size_ohe,0,NI
 bed_size_ohe,1,200-299
 bed_size_ohe,2,<100
