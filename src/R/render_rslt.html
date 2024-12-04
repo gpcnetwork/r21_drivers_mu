@@ -68,13 +68,20 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="overall-descriptive-summary" class="level2">
 <h2 class="anchored" data-anchor-id="overall-descriptive-summary">Overall Descriptive Summary</h2>
-<p>Oracle Cerner Real World EHR Database recently had released their 2024/08 data in both source and OMOP format. Following the same inclusion and exclusion criteria, we identified a total of 2,570,505 pregnancy events among 1,712,026 individuals. We will focus the analysis on the initial pregnancy event.</p>
+<p>Oracle Cerner Real World EHR Database recently had released their 2024/08 data in both source and OMOP format. Following the same inclusion and exclusion criteria as below:</p>
+<ul>
+<li><p>Delivery events identified by DRG, ICD, or CPT codes defined in <a href="https://github.com/gpcnetwork/r21_drivers_mu/blob/main/ref/vs-mmm-delivery.json">here</a></p></li>
+<li><p>Delivery events occurred between 2015-01-01 and 2023-12-31 (de-identified dates)</p></li>
+<li><p>Delivery episode grouping: at least 211 days since the last delivery event in the time period</p></li>
+<li><p>Maternal age between 10 years and 55 years of age</p></li>
+</ul>
+<p>We identified a total of 1583720 pregnancy events among 1260033 individuals. We will focus the analysis on the 1260033 initial pregnancy events.The following table gives the overall summary of the study cohort, where agegrp1 defines as ‘&lt;20 yo’, agegrp2 to agegrp5 are 5-years incrementals, and agegrp6 is ‘&gt;=40 yo’.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="lightable-paper caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">var_print</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">var_rklbl</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">cat</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">count</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">perc</th>
@@ -82,223 +89,497 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td rowspan="4" style="text-align: left; vertical-align: top !important;">1.Age</td>
+<td rowspan="6" style="text-align: left; vertical-align: top !important;">01.Age Group (ref:30-35)</td>
 <td style="text-align: left;">agegrp1</td>
-<td style="text-align: right;">80800</td>
-<td style="text-align: right;">4.72</td>
+<td style="text-align: right;">53097</td>
+<td style="text-align: right;">4.21</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">agegrp2</td>
-<td style="text-align: right;">844813</td>
-<td style="text-align: right;">49.35</td>
+<td style="text-align: right;">234698</td>
+<td style="text-align: right;">18.63</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">agegrp3</td>
-<td style="text-align: right;">723658</td>
-<td style="text-align: right;">42.27</td>
+<td style="text-align: right;">354763</td>
+<td style="text-align: right;">28.16</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">agegrp4</td>
-<td style="text-align: right;">62755</td>
-<td style="text-align: right;">3.67</td>
+<td style="text-align: right;">358609</td>
+<td style="text-align: right;">28.46</td>
 </tr>
 <tr class="odd">
-<td rowspan="7" style="text-align: left; vertical-align: top !important;">2.Race</td>
+<td style="text-align: left;">agegrp5</td>
+<td style="text-align: right;">199807</td>
+<td style="text-align: right;">15.86</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">agegrp6</td>
+<td style="text-align: right;">59059</td>
+<td style="text-align: right;">4.69</td>
+</tr>
+<tr class="odd">
+<td rowspan="7" style="text-align: left; vertical-align: top !important;">02.Race (ref:White)</td>
 <td style="text-align: left;">American Indian or Alaska Native</td>
-<td style="text-align: right;">24213</td>
-<td style="text-align: right;">1.41</td>
+<td style="text-align: right;">17431</td>
+<td style="text-align: right;">1.38</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Asian</td>
-<td style="text-align: right;">61771</td>
-<td style="text-align: right;">3.61</td>
+<td style="text-align: right;">47945</td>
+<td style="text-align: right;">3.81</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Black or African American</td>
-<td style="text-align: right;">166440</td>
-<td style="text-align: right;">9.72</td>
+<td style="text-align: right;">123582</td>
+<td style="text-align: right;">9.81</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Native Hawaiian or Other Pacific Islander</td>
-<td style="text-align: right;">7004</td>
-<td style="text-align: right;">0.41</td>
+<td style="text-align: right;">5014</td>
+<td style="text-align: right;">0.40</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Other</td>
-<td style="text-align: right;">197414</td>
-<td style="text-align: right;">11.53</td>
+<td style="text-align: right;">150107</td>
+<td style="text-align: right;">11.91</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Unknown</td>
-<td style="text-align: right;">61792</td>
-<td style="text-align: right;">3.61</td>
+<td style="text-align: right;">47183</td>
+<td style="text-align: right;">3.74</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">White</td>
-<td style="text-align: right;">1193392</td>
-<td style="text-align: right;">69.71</td>
+<td style="text-align: right;">868771</td>
+<td style="text-align: right;">68.95</td>
 </tr>
 <tr class="even">
-<td rowspan="3" style="text-align: left; vertical-align: top !important;">3.Ethnicity</td>
+<td rowspan="3" style="text-align: left; vertical-align: top !important;">03.Ethnicity (ref:Non-Hispanic)</td>
 <td style="text-align: left;">Hispanic or Latino</td>
-<td style="text-align: right;">522389</td>
-<td style="text-align: right;">30.51</td>
+<td style="text-align: right;">385349</td>
+<td style="text-align: right;">30.58</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Non-Hispanic</td>
-<td style="text-align: right;">1144397</td>
-<td style="text-align: right;">66.84</td>
+<td style="text-align: right;">839111</td>
+<td style="text-align: right;">66.59</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Unknown</td>
-<td style="text-align: right;">45240</td>
-<td style="text-align: right;">2.64</td>
+<td style="text-align: right;">35573</td>
+<td style="text-align: right;">2.82</td>
 </tr>
 <tr class="odd">
-<td rowspan="2" style="text-align: left; vertical-align: top !important;">4.Segment</td>
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">04.Segment (ref:Health System)</td>
 <td style="text-align: left;">Health System</td>
-<td style="text-align: right;">1471922</td>
-<td style="text-align: right;">85.98</td>
+<td style="text-align: right;">1082471</td>
+<td style="text-align: right;">85.91</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Hospital</td>
-<td style="text-align: right;">240104</td>
-<td style="text-align: right;">14.02</td>
+<td style="text-align: right;">177562</td>
+<td style="text-align: right;">14.09</td>
 </tr>
 <tr class="odd">
-<td rowspan="5" style="text-align: left; vertical-align: top !important;">5.Speciality</td>
+<td rowspan="5" style="text-align: left; vertical-align: top !important;">05.Speciality (ref:Health System)</td>
 <td style="text-align: left;">Academic</td>
-<td style="text-align: right;">162218</td>
-<td style="text-align: right;">9.48</td>
+<td style="text-align: right;">119107</td>
+<td style="text-align: right;">9.45</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Acute Care Hospital</td>
-<td style="text-align: right;">247686</td>
-<td style="text-align: right;">14.47</td>
+<td style="text-align: right;">184654</td>
+<td style="text-align: right;">14.65</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Childrens</td>
-<td style="text-align: right;">3805</td>
-<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">2993</td>
+<td style="text-align: right;">0.24</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Critical Access Hospital</td>
-<td style="text-align: right;">23146</td>
+<td style="text-align: right;">16996</td>
 <td style="text-align: right;">1.35</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Health System</td>
-<td style="text-align: right;">1275171</td>
-<td style="text-align: right;">74.48</td>
+<td style="text-align: right;">936283</td>
+<td style="text-align: right;">74.31</td>
 </tr>
 <tr class="even">
-<td rowspan="7" style="text-align: left; vertical-align: top !important;">6.Bed size</td>
+<td rowspan="7" style="text-align: left; vertical-align: top !important;">06.Bed size (ref:&gt;=1000)</td>
 <td style="text-align: left;">100-199</td>
-<td style="text-align: right;">54246</td>
-<td style="text-align: right;">3.17</td>
+<td style="text-align: right;">40901</td>
+<td style="text-align: right;">3.25</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">200-299</td>
-<td style="text-align: right;">47797</td>
-<td style="text-align: right;">2.79</td>
+<td style="text-align: right;">35421</td>
+<td style="text-align: right;">2.81</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">300-499</td>
-<td style="text-align: right;">191383</td>
-<td style="text-align: right;">11.18</td>
+<td style="text-align: right;">141811</td>
+<td style="text-align: right;">11.25</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">500-999</td>
-<td style="text-align: right;">468122</td>
-<td style="text-align: right;">27.34</td>
+<td style="text-align: right;">337143</td>
+<td style="text-align: right;">26.76</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">&lt;100</td>
-<td style="text-align: right;">42906</td>
-<td style="text-align: right;">2.51</td>
+<td style="text-align: right;">31349</td>
+<td style="text-align: right;">2.49</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">&gt;=1000</td>
-<td style="text-align: right;">906245</td>
-<td style="text-align: right;">52.93</td>
+<td style="text-align: right;">669761</td>
+<td style="text-align: right;">53.15</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">NI</td>
-<td style="text-align: right;">1327</td>
-<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">3647</td>
+<td style="text-align: right;">0.29</td>
 </tr>
 <tr class="odd">
-<td rowspan="10" style="text-align: left; vertical-align: top !important;">7.Zip code</td>
+<td rowspan="10" style="text-align: left; vertical-align: top !important;">07.Zip code (ref:9)</td>
 <td style="text-align: left;">0</td>
-<td style="text-align: right;">151380</td>
-<td style="text-align: right;">8.84</td>
+<td style="text-align: right;">110681</td>
+<td style="text-align: right;">8.78</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">1</td>
-<td style="text-align: right;">155578</td>
-<td style="text-align: right;">9.09</td>
+<td style="text-align: right;">111644</td>
+<td style="text-align: right;">8.86</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2</td>
-<td style="text-align: right;">80360</td>
-<td style="text-align: right;">4.69</td>
+<td style="text-align: right;">61653</td>
+<td style="text-align: right;">4.89</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">3</td>
-<td style="text-align: right;">194479</td>
-<td style="text-align: right;">11.36</td>
+<td style="text-align: right;">148464</td>
+<td style="text-align: right;">11.78</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">4</td>
-<td style="text-align: right;">39316</td>
-<td style="text-align: right;">2.30</td>
+<td style="text-align: right;">29284</td>
+<td style="text-align: right;">2.32</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">5</td>
-<td style="text-align: right;">74600</td>
-<td style="text-align: right;">4.36</td>
+<td style="text-align: right;">55748</td>
+<td style="text-align: right;">4.42</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">6</td>
-<td style="text-align: right;">190679</td>
-<td style="text-align: right;">11.14</td>
+<td style="text-align: right;">134324</td>
+<td style="text-align: right;">10.66</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">7</td>
-<td style="text-align: right;">126448</td>
-<td style="text-align: right;">7.39</td>
+<td style="text-align: right;">91591</td>
+<td style="text-align: right;">7.27</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">8</td>
-<td style="text-align: right;">333827</td>
-<td style="text-align: right;">19.50</td>
+<td style="text-align: right;">240419</td>
+<td style="text-align: right;">19.08</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">9</td>
-<td style="text-align: right;">365359</td>
-<td style="text-align: right;">21.34</td>
+<td style="text-align: right;">276225</td>
+<td style="text-align: right;">21.92</td>
 </tr>
 <tr class="odd">
-<td rowspan="2" style="text-align: left; vertical-align: top !important;">8.Death indicator</td>
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">08.Delivery type (ref:Vaginal)</td>
+<td style="text-align: left;">d_c</td>
+<td style="text-align: right;">427059</td>
+<td style="text-align: right;">33.89</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">d_v</td>
+<td style="text-align: right;">832974</td>
+<td style="text-align: right;">66.11</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">09.Death indicator</td>
 <td style="text-align: left;">0</td>
-<td style="text-align: right;">1711238</td>
+<td style="text-align: right;">1259342</td>
 <td style="text-align: right;">99.95</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">1</td>
-<td style="text-align: right;">788</td>
+<td style="text-align: right;">691</td>
 <td style="text-align: right;">0.05</td>
 </tr>
 <tr class="odd">
-<td rowspan="2" style="text-align: left; vertical-align: top !important;">9.SMM indicator</td>
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">10.Any SMM indicator</td>
 <td style="text-align: left;">0</td>
-<td style="text-align: right;">1690725</td>
-<td style="text-align: right;">98.76</td>
+<td style="text-align: right;">1243376</td>
+<td style="text-align: right;">98.68</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">1</td>
-<td style="text-align: right;">21301</td>
-<td style="text-align: right;">1.24</td>
+<td style="text-align: right;">16657</td>
+<td style="text-align: right;">1.32</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">11.Any SMM indicator (90pctl-los adjusted)</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1252452</td>
+<td style="text-align: right;">99.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">7581</td>
+<td style="text-align: right;">0.60</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">12. History of hepatitis</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1252428</td>
+<td style="text-align: right;">99.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">7605</td>
+<td style="text-align: right;">0.60</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">13. History of ischemic heart disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1258640</td>
+<td style="text-align: right;">99.89</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1393</td>
+<td style="text-align: right;">0.11</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">14. History of asthma</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1180342</td>
+<td style="text-align: right;">93.68</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">79691</td>
+<td style="text-align: right;">6.32</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">15. History of liver disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1256722</td>
+<td style="text-align: right;">99.74</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">3311</td>
+<td style="text-align: right;">0.26</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">16. History of atrial fibrillation</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1259171</td>
+<td style="text-align: right;">99.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">862</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">17. History of stroke</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1259573</td>
+<td style="text-align: right;">99.96</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">460</td>
+<td style="text-align: right;">0.04</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">18. History of chronic kidney disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1258682</td>
+<td style="text-align: right;">99.89</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1351</td>
+<td style="text-align: right;">0.11</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">19. History of chronic obstructive pulmonary disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1218293</td>
+<td style="text-align: right;">96.69</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">41740</td>
+<td style="text-align: right;">3.31</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">20. History of hypertension</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1206466</td>
+<td style="text-align: right;">95.75</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">53567</td>
+<td style="text-align: right;">4.25</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">21. History of heart failure</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1259158</td>
+<td style="text-align: right;">99.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">875</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">22. History of HIV/AIDS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1259321</td>
+<td style="text-align: right;">99.94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">712</td>
+<td style="text-align: right;">0.06</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">23. History of peripheral vascular disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1259084</td>
+<td style="text-align: right;">99.92</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">949</td>
+<td style="text-align: right;">0.08</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">24. History of rheumatoid arthritis</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1256229</td>
+<td style="text-align: right;">99.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">3804</td>
+<td style="text-align: right;">0.30</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">25. History of autoimmune disorders</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1250310</td>
+<td style="text-align: right;">99.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">9723</td>
+<td style="text-align: right;">0.77</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">26. History of diabetes mellitus</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1237441</td>
+<td style="text-align: right;">98.21</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">22592</td>
+<td style="text-align: right;">1.79</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">28. History of substance dependency</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1260000</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">29. History of alcohol dependency</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1260029</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30a. LOS&gt;=3 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">743906</td>
+<td style="text-align: right;">59.04</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">516127</td>
+<td style="text-align: right;">40.96</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30b. LOS&gt;=4 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1064156</td>
+<td style="text-align: right;">84.45</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">195877</td>
+<td style="text-align: right;">15.55</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30c. LOS&gt;=5 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1176478</td>
+<td style="text-align: right;">93.37</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">83555</td>
+<td style="text-align: right;">6.63</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30d. LOS&gt;=6 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1213391</td>
+<td style="text-align: right;">96.30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">46642</td>
+<td style="text-align: right;">3.70</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30e. LOS&gt;=7 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">1226585</td>
+<td style="text-align: right;">97.35</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">33448</td>
+<td style="text-align: right;">2.65</td>
 </tr>
 </tbody>
 </table>
@@ -306,310 +587,846 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
+<p>The table below reports column-wise (col_p1,col_p0) and row-wise (row_p1, row_p0) percentages stratified SMM status, `SMMANY_IND`:</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="lightable-paper caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
 <th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+<th colspan="3" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 w/ SMM
 </div></th>
-<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+<th colspan="3" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
 wo/ SMM
 </div></th>
 </tr>
 <tr class="odd">
-<th style="text-align: left;" data-quarto-table-cell-role="th">var_print</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">var_rklbl</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">cat</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">count_1</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">perc_1</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">count_0</th>
-<th style="text-align: right;" data-quarto-table-cell-role="th">perc_0</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">row_p1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">col_p1</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">n0</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">row_p0</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">col_p0</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td rowspan="4" style="text-align: left; vertical-align: top !important;">1.Age</td>
+<td rowspan="6" style="text-align: left; vertical-align: top !important;">01.Age Group (ref:30-35)</td>
 <td style="text-align: left;">agegrp1</td>
-<td style="text-align: right;">1338</td>
-<td style="text-align: right;">0.08</td>
-<td style="text-align: right;">79462</td>
-<td style="text-align: right;">4.64</td>
+<td style="text-align: right;">932</td>
+<td style="text-align: right;">1.76</td>
+<td style="text-align: right;">5.60</td>
+<td style="text-align: right;">52165</td>
+<td style="text-align: right;">98.24</td>
+<td style="text-align: right;">4.20</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">agegrp2</td>
-<td style="text-align: right;">9360</td>
-<td style="text-align: right;">0.55</td>
-<td style="text-align: right;">835453</td>
-<td style="text-align: right;">48.80</td>
+<td style="text-align: right;">2982</td>
+<td style="text-align: right;">1.27</td>
+<td style="text-align: right;">17.90</td>
+<td style="text-align: right;">231716</td>
+<td style="text-align: right;">98.73</td>
+<td style="text-align: right;">18.64</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">agegrp3</td>
-<td style="text-align: right;">9206</td>
-<td style="text-align: right;">0.54</td>
-<td style="text-align: right;">714452</td>
-<td style="text-align: right;">41.73</td>
+<td style="text-align: right;">3923</td>
+<td style="text-align: right;">1.11</td>
+<td style="text-align: right;">23.55</td>
+<td style="text-align: right;">350840</td>
+<td style="text-align: right;">98.89</td>
+<td style="text-align: right;">28.22</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">agegrp4</td>
-<td style="text-align: right;">1397</td>
-<td style="text-align: right;">0.08</td>
-<td style="text-align: right;">61358</td>
-<td style="text-align: right;">3.58</td>
+<td style="text-align: right;">4336</td>
+<td style="text-align: right;">1.21</td>
+<td style="text-align: right;">26.03</td>
+<td style="text-align: right;">354273</td>
+<td style="text-align: right;">98.79</td>
+<td style="text-align: right;">28.49</td>
 </tr>
 <tr class="odd">
-<td rowspan="7" style="text-align: left; vertical-align: top !important;">2.Race</td>
+<td style="text-align: left;">agegrp5</td>
+<td style="text-align: right;">3146</td>
+<td style="text-align: right;">1.57</td>
+<td style="text-align: right;">18.89</td>
+<td style="text-align: right;">196661</td>
+<td style="text-align: right;">98.43</td>
+<td style="text-align: right;">15.82</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">agegrp6</td>
+<td style="text-align: right;">1338</td>
+<td style="text-align: right;">2.27</td>
+<td style="text-align: right;">8.03</td>
+<td style="text-align: right;">57721</td>
+<td style="text-align: right;">97.73</td>
+<td style="text-align: right;">4.64</td>
+</tr>
+<tr class="odd">
+<td rowspan="7" style="text-align: left; vertical-align: top !important;">02.Race (ref:White)</td>
 <td style="text-align: left;">American Indian or Alaska Native</td>
-<td style="text-align: right;">613</td>
-<td style="text-align: right;">0.04</td>
-<td style="text-align: right;">23600</td>
-<td style="text-align: right;">1.38</td>
+<td style="text-align: right;">457</td>
+<td style="text-align: right;">2.62</td>
+<td style="text-align: right;">2.74</td>
+<td style="text-align: right;">16974</td>
+<td style="text-align: right;">97.38</td>
+<td style="text-align: right;">1.37</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Asian</td>
-<td style="text-align: right;">850</td>
-<td style="text-align: right;">0.05</td>
-<td style="text-align: right;">60921</td>
-<td style="text-align: right;">3.56</td>
+<td style="text-align: right;">709</td>
+<td style="text-align: right;">1.48</td>
+<td style="text-align: right;">4.26</td>
+<td style="text-align: right;">47236</td>
+<td style="text-align: right;">98.52</td>
+<td style="text-align: right;">3.80</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Black or African American</td>
-<td style="text-align: right;">2774</td>
-<td style="text-align: right;">0.16</td>
-<td style="text-align: right;">163666</td>
-<td style="text-align: right;">9.56</td>
+<td style="text-align: right;">2169</td>
+<td style="text-align: right;">1.76</td>
+<td style="text-align: right;">13.02</td>
+<td style="text-align: right;">121413</td>
+<td style="text-align: right;">98.24</td>
+<td style="text-align: right;">9.76</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Native Hawaiian or Other Pacific Islander</td>
-<td style="text-align: right;">131</td>
-<td style="text-align: right;">0.01</td>
-<td style="text-align: right;">6873</td>
+<td style="text-align: right;">96</td>
+<td style="text-align: right;">1.91</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: right;">4918</td>
+<td style="text-align: right;">98.09</td>
 <td style="text-align: right;">0.40</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Other</td>
-<td style="text-align: right;">2712</td>
-<td style="text-align: right;">0.16</td>
-<td style="text-align: right;">194702</td>
-<td style="text-align: right;">11.37</td>
+<td style="text-align: right;">2151</td>
+<td style="text-align: right;">1.43</td>
+<td style="text-align: right;">12.91</td>
+<td style="text-align: right;">147956</td>
+<td style="text-align: right;">98.57</td>
+<td style="text-align: right;">11.90</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Unknown</td>
-<td style="text-align: right;">1239</td>
-<td style="text-align: right;">0.07</td>
-<td style="text-align: right;">60553</td>
-<td style="text-align: right;">3.54</td>
+<td style="text-align: right;">956</td>
+<td style="text-align: right;">2.03</td>
+<td style="text-align: right;">5.74</td>
+<td style="text-align: right;">46227</td>
+<td style="text-align: right;">97.97</td>
+<td style="text-align: right;">3.72</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">White</td>
-<td style="text-align: right;">12982</td>
-<td style="text-align: right;">0.76</td>
-<td style="text-align: right;">1180410</td>
-<td style="text-align: right;">68.95</td>
+<td style="text-align: right;">10119</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">60.75</td>
+<td style="text-align: right;">858652</td>
+<td style="text-align: right;">98.84</td>
+<td style="text-align: right;">69.06</td>
 </tr>
 <tr class="even">
-<td rowspan="3" style="text-align: left; vertical-align: top !important;">3.Ethnicity</td>
+<td rowspan="3" style="text-align: left; vertical-align: top !important;">03.Ethnicity (ref:Non-Hispanic)</td>
 <td style="text-align: left;">Hispanic or Latino</td>
-<td style="text-align: right;">7124</td>
-<td style="text-align: right;">0.42</td>
-<td style="text-align: right;">515265</td>
-<td style="text-align: right;">30.10</td>
+<td style="text-align: right;">5595</td>
+<td style="text-align: right;">1.45</td>
+<td style="text-align: right;">33.59</td>
+<td style="text-align: right;">379754</td>
+<td style="text-align: right;">98.55</td>
+<td style="text-align: right;">30.54</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Non-Hispanic</td>
-<td style="text-align: right;">13505</td>
-<td style="text-align: right;">0.79</td>
-<td style="text-align: right;">1130892</td>
-<td style="text-align: right;">66.06</td>
+<td style="text-align: right;">10535</td>
+<td style="text-align: right;">1.26</td>
+<td style="text-align: right;">63.25</td>
+<td style="text-align: right;">828576</td>
+<td style="text-align: right;">98.74</td>
+<td style="text-align: right;">66.64</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Unknown</td>
-<td style="text-align: right;">672</td>
-<td style="text-align: right;">0.04</td>
-<td style="text-align: right;">44568</td>
-<td style="text-align: right;">2.60</td>
+<td style="text-align: right;">527</td>
+<td style="text-align: right;">1.48</td>
+<td style="text-align: right;">3.16</td>
+<td style="text-align: right;">35046</td>
+<td style="text-align: right;">98.52</td>
+<td style="text-align: right;">2.82</td>
 </tr>
 <tr class="odd">
-<td rowspan="2" style="text-align: left; vertical-align: top !important;">4.Segment</td>
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">04.Segment (ref:Health System)</td>
 <td style="text-align: left;">Health System</td>
-<td style="text-align: right;">17947</td>
-<td style="text-align: right;">1.05</td>
-<td style="text-align: right;">1453975</td>
-<td style="text-align: right;">84.93</td>
+<td style="text-align: right;">14079</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">84.52</td>
+<td style="text-align: right;">1068392</td>
+<td style="text-align: right;">98.70</td>
+<td style="text-align: right;">85.93</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Hospital</td>
-<td style="text-align: right;">3354</td>
-<td style="text-align: right;">0.20</td>
-<td style="text-align: right;">236750</td>
-<td style="text-align: right;">13.83</td>
+<td style="text-align: right;">2578</td>
+<td style="text-align: right;">1.45</td>
+<td style="text-align: right;">15.48</td>
+<td style="text-align: right;">174984</td>
+<td style="text-align: right;">98.55</td>
+<td style="text-align: right;">14.07</td>
 </tr>
 <tr class="odd">
-<td rowspan="5" style="text-align: left; vertical-align: top !important;">5.Speciality</td>
+<td rowspan="5" style="text-align: left; vertical-align: top !important;">05.Speciality (ref:Health System)</td>
 <td style="text-align: left;">Academic</td>
-<td style="text-align: right;">2180</td>
-<td style="text-align: right;">0.13</td>
-<td style="text-align: right;">160038</td>
-<td style="text-align: right;">9.35</td>
+<td style="text-align: right;">1742</td>
+<td style="text-align: right;">1.46</td>
+<td style="text-align: right;">10.46</td>
+<td style="text-align: right;">117365</td>
+<td style="text-align: right;">98.54</td>
+<td style="text-align: right;">9.44</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Acute Care Hospital</td>
-<td style="text-align: right;">3233</td>
-<td style="text-align: right;">0.19</td>
-<td style="text-align: right;">244453</td>
-<td style="text-align: right;">14.28</td>
+<td style="text-align: right;">2464</td>
+<td style="text-align: right;">1.33</td>
+<td style="text-align: right;">14.79</td>
+<td style="text-align: right;">182190</td>
+<td style="text-align: right;">98.67</td>
+<td style="text-align: right;">14.65</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Childrens</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">3780</td>
-<td style="text-align: right;">0.22</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">0.13</td>
+<td style="text-align: right;">2972</td>
+<td style="text-align: right;">99.30</td>
+<td style="text-align: right;">0.24</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Critical Access Hospital</td>
-<td style="text-align: right;">313</td>
-<td style="text-align: right;">0.02</td>
-<td style="text-align: right;">22833</td>
-<td style="text-align: right;">1.33</td>
+<td style="text-align: right;">236</td>
+<td style="text-align: right;">1.39</td>
+<td style="text-align: right;">1.42</td>
+<td style="text-align: right;">16760</td>
+<td style="text-align: right;">98.61</td>
+<td style="text-align: right;">1.35</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Health System</td>
-<td style="text-align: right;">15550</td>
-<td style="text-align: right;">0.91</td>
-<td style="text-align: right;">1259621</td>
-<td style="text-align: right;">73.57</td>
+<td style="text-align: right;">12194</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">73.21</td>
+<td style="text-align: right;">924089</td>
+<td style="text-align: right;">98.70</td>
+<td style="text-align: right;">74.32</td>
 </tr>
 <tr class="even">
-<td rowspan="7" style="text-align: left; vertical-align: top !important;">6.Bed size</td>
+<td rowspan="7" style="text-align: left; vertical-align: top !important;">06.Bed size (ref:&gt;=1000)</td>
 <td style="text-align: left;">100-199</td>
-<td style="text-align: right;">844</td>
-<td style="text-align: right;">0.05</td>
-<td style="text-align: right;">53402</td>
-<td style="text-align: right;">3.12</td>
+<td style="text-align: right;">640</td>
+<td style="text-align: right;">1.56</td>
+<td style="text-align: right;">3.84</td>
+<td style="text-align: right;">40261</td>
+<td style="text-align: right;">98.44</td>
+<td style="text-align: right;">3.24</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">200-299</td>
-<td style="text-align: right;">1115</td>
-<td style="text-align: right;">0.07</td>
-<td style="text-align: right;">46682</td>
-<td style="text-align: right;">2.73</td>
+<td style="text-align: right;">852</td>
+<td style="text-align: right;">2.41</td>
+<td style="text-align: right;">5.11</td>
+<td style="text-align: right;">34569</td>
+<td style="text-align: right;">97.59</td>
+<td style="text-align: right;">2.78</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">300-499</td>
-<td style="text-align: right;">1677</td>
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">189706</td>
-<td style="text-align: right;">11.08</td>
+<td style="text-align: right;">1336</td>
+<td style="text-align: right;">0.94</td>
+<td style="text-align: right;">8.02</td>
+<td style="text-align: right;">140475</td>
+<td style="text-align: right;">99.06</td>
+<td style="text-align: right;">11.30</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">500-999</td>
-<td style="text-align: right;">7593</td>
-<td style="text-align: right;">0.44</td>
-<td style="text-align: right;">460529</td>
-<td style="text-align: right;">26.90</td>
+<td style="text-align: right;">5751</td>
+<td style="text-align: right;">1.71</td>
+<td style="text-align: right;">34.53</td>
+<td style="text-align: right;">331392</td>
+<td style="text-align: right;">98.29</td>
+<td style="text-align: right;">26.65</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">&lt;100</td>
-<td style="text-align: right;">718</td>
-<td style="text-align: right;">0.04</td>
-<td style="text-align: right;">42188</td>
-<td style="text-align: right;">2.46</td>
+<td style="text-align: right;">547</td>
+<td style="text-align: right;">1.74</td>
+<td style="text-align: right;">3.28</td>
+<td style="text-align: right;">30802</td>
+<td style="text-align: right;">98.26</td>
+<td style="text-align: right;">2.48</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">&gt;=1000</td>
-<td style="text-align: right;">9354</td>
-<td style="text-align: right;">0.55</td>
-<td style="text-align: right;">896891</td>
-<td style="text-align: right;">52.39</td>
+<td style="text-align: right;">7531</td>
+<td style="text-align: right;">1.12</td>
+<td style="text-align: right;">45.21</td>
+<td style="text-align: right;">662230</td>
+<td style="text-align: right;">98.88</td>
+<td style="text-align: right;">53.26</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">NI</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">1327</td>
-<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">3647</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">0.29</td>
 </tr>
 <tr class="odd">
-<td rowspan="10" style="text-align: left; vertical-align: top !important;">7.Zip code</td>
+<td rowspan="10" style="text-align: left; vertical-align: top !important;">07.Zip code (ref:9)</td>
 <td style="text-align: left;">0</td>
-<td style="text-align: right;">2843</td>
-<td style="text-align: right;">0.17</td>
-<td style="text-align: right;">148537</td>
-<td style="text-align: right;">8.68</td>
+<td style="text-align: right;">2146</td>
+<td style="text-align: right;">1.94</td>
+<td style="text-align: right;">12.88</td>
+<td style="text-align: right;">108535</td>
+<td style="text-align: right;">98.06</td>
+<td style="text-align: right;">8.73</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">1</td>
-<td style="text-align: right;">1987</td>
-<td style="text-align: right;">0.12</td>
-<td style="text-align: right;">153591</td>
-<td style="text-align: right;">8.97</td>
+<td style="text-align: right;">1563</td>
+<td style="text-align: right;">1.40</td>
+<td style="text-align: right;">9.38</td>
+<td style="text-align: right;">110081</td>
+<td style="text-align: right;">98.60</td>
+<td style="text-align: right;">8.85</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">2</td>
-<td style="text-align: right;">1250</td>
-<td style="text-align: right;">0.07</td>
-<td style="text-align: right;">79110</td>
-<td style="text-align: right;">4.62</td>
+<td style="text-align: right;">966</td>
+<td style="text-align: right;">1.57</td>
+<td style="text-align: right;">5.80</td>
+<td style="text-align: right;">60687</td>
+<td style="text-align: right;">98.43</td>
+<td style="text-align: right;">4.88</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">3</td>
-<td style="text-align: right;">3454</td>
-<td style="text-align: right;">0.20</td>
-<td style="text-align: right;">191025</td>
-<td style="text-align: right;">11.16</td>
+<td style="text-align: right;">2712</td>
+<td style="text-align: right;">1.83</td>
+<td style="text-align: right;">16.28</td>
+<td style="text-align: right;">145752</td>
+<td style="text-align: right;">98.17</td>
+<td style="text-align: right;">11.72</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">4</td>
-<td style="text-align: right;">396</td>
-<td style="text-align: right;">0.02</td>
-<td style="text-align: right;">38920</td>
-<td style="text-align: right;">2.27</td>
+<td style="text-align: right;">306</td>
+<td style="text-align: right;">1.04</td>
+<td style="text-align: right;">1.84</td>
+<td style="text-align: right;">28978</td>
+<td style="text-align: right;">98.96</td>
+<td style="text-align: right;">2.33</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">5</td>
-<td style="text-align: right;">954</td>
-<td style="text-align: right;">0.06</td>
-<td style="text-align: right;">73646</td>
-<td style="text-align: right;">4.30</td>
+<td style="text-align: right;">697</td>
+<td style="text-align: right;">1.25</td>
+<td style="text-align: right;">4.18</td>
+<td style="text-align: right;">55051</td>
+<td style="text-align: right;">98.75</td>
+<td style="text-align: right;">4.43</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">6</td>
-<td style="text-align: right;">2163</td>
-<td style="text-align: right;">0.13</td>
-<td style="text-align: right;">188516</td>
-<td style="text-align: right;">11.01</td>
+<td style="text-align: right;">1647</td>
+<td style="text-align: right;">1.23</td>
+<td style="text-align: right;">9.89</td>
+<td style="text-align: right;">132677</td>
+<td style="text-align: right;">98.77</td>
+<td style="text-align: right;">10.67</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">7</td>
-<td style="text-align: right;">1072</td>
-<td style="text-align: right;">0.06</td>
-<td style="text-align: right;">125376</td>
-<td style="text-align: right;">7.32</td>
+<td style="text-align: right;">763</td>
+<td style="text-align: right;">0.83</td>
+<td style="text-align: right;">4.58</td>
+<td style="text-align: right;">90828</td>
+<td style="text-align: right;">99.17</td>
+<td style="text-align: right;">7.30</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">8</td>
-<td style="text-align: right;">1905</td>
-<td style="text-align: right;">0.11</td>
-<td style="text-align: right;">331922</td>
-<td style="text-align: right;">19.39</td>
+<td style="text-align: right;">1587</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">9.53</td>
+<td style="text-align: right;">238832</td>
+<td style="text-align: right;">99.34</td>
+<td style="text-align: right;">19.21</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">9</td>
-<td style="text-align: right;">5277</td>
-<td style="text-align: right;">0.31</td>
-<td style="text-align: right;">360082</td>
-<td style="text-align: right;">21.03</td>
+<td style="text-align: right;">4270</td>
+<td style="text-align: right;">1.55</td>
+<td style="text-align: right;">25.63</td>
+<td style="text-align: right;">271955</td>
+<td style="text-align: right;">98.45</td>
+<td style="text-align: right;">21.87</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">08.Delivery type (ref:Vaginal)</td>
+<td style="text-align: left;">d_c</td>
+<td style="text-align: right;">10063</td>
+<td style="text-align: right;">2.36</td>
+<td style="text-align: right;">60.41</td>
+<td style="text-align: right;">416996</td>
+<td style="text-align: right;">97.64</td>
+<td style="text-align: right;">33.54</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">d_v</td>
+<td style="text-align: right;">6594</td>
+<td style="text-align: right;">0.79</td>
+<td style="text-align: right;">39.59</td>
+<td style="text-align: right;">826380</td>
+<td style="text-align: right;">99.21</td>
+<td style="text-align: right;">66.46</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">12. History of hepatitis</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16487</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">98.98</td>
+<td style="text-align: right;">1235941</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.40</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">2.24</td>
+<td style="text-align: right;">1.02</td>
+<td style="text-align: right;">7435</td>
+<td style="text-align: right;">97.76</td>
+<td style="text-align: right;">0.60</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">13. History of ischemic heart disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16607</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.70</td>
+<td style="text-align: right;">1242033</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.89</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">3.59</td>
+<td style="text-align: right;">0.30</td>
+<td style="text-align: right;">1343</td>
+<td style="text-align: right;">96.41</td>
+<td style="text-align: right;">0.11</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">14. History of asthma</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">15396</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">92.43</td>
+<td style="text-align: right;">1164946</td>
+<td style="text-align: right;">98.70</td>
+<td style="text-align: right;">93.69</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1261</td>
+<td style="text-align: right;">1.58</td>
+<td style="text-align: right;">7.57</td>
+<td style="text-align: right;">78430</td>
+<td style="text-align: right;">98.42</td>
+<td style="text-align: right;">6.31</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">15. History of liver disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16578</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.53</td>
+<td style="text-align: right;">1240144</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.74</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">2.39</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">3232</td>
+<td style="text-align: right;">97.61</td>
+<td style="text-align: right;">0.26</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">16. History of atrial fibrillation</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16623</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.80</td>
+<td style="text-align: right;">1242548</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">3.94</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">828</td>
+<td style="text-align: right;">96.06</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">17. History of stroke</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16643</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.92</td>
+<td style="text-align: right;">1242930</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.96</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">3.04</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">446</td>
+<td style="text-align: right;">96.96</td>
+<td style="text-align: right;">0.04</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">18. History of chronic kidney disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16574</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.50</td>
+<td style="text-align: right;">1242108</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">83</td>
+<td style="text-align: right;">6.14</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">1268</td>
+<td style="text-align: right;">93.86</td>
+<td style="text-align: right;">0.10</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">19. History of chronic obstructive pulmonary disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16082</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">96.55</td>
+<td style="text-align: right;">1202211</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">96.69</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">575</td>
+<td style="text-align: right;">1.38</td>
+<td style="text-align: right;">3.45</td>
+<td style="text-align: right;">41165</td>
+<td style="text-align: right;">98.62</td>
+<td style="text-align: right;">3.31</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">20. History of hypertension</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">15573</td>
+<td style="text-align: right;">1.29</td>
+<td style="text-align: right;">93.49</td>
+<td style="text-align: right;">1190893</td>
+<td style="text-align: right;">98.71</td>
+<td style="text-align: right;">95.78</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1084</td>
+<td style="text-align: right;">2.02</td>
+<td style="text-align: right;">6.51</td>
+<td style="text-align: right;">52483</td>
+<td style="text-align: right;">97.98</td>
+<td style="text-align: right;">4.22</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">21. History of heart failure</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16611</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.72</td>
+<td style="text-align: right;">1242547</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">5.26</td>
+<td style="text-align: right;">0.28</td>
+<td style="text-align: right;">829</td>
+<td style="text-align: right;">94.74</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">22. History of HIV/AIDS</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16645</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.93</td>
+<td style="text-align: right;">1242676</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.94</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">1.69</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">700</td>
+<td style="text-align: right;">98.31</td>
+<td style="text-align: right;">0.06</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">23. History of peripheral vascular disease</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16630</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.84</td>
+<td style="text-align: right;">1242454</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.93</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">2.85</td>
+<td style="text-align: right;">0.16</td>
+<td style="text-align: right;">922</td>
+<td style="text-align: right;">97.15</td>
+<td style="text-align: right;">0.07</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">24. History of rheumatoid arthritis</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16568</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">99.47</td>
+<td style="text-align: right;">1239661</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.70</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">2.34</td>
+<td style="text-align: right;">0.53</td>
+<td style="text-align: right;">3715</td>
+<td style="text-align: right;">97.66</td>
+<td style="text-align: right;">0.30</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">25. History of autoimmune disorders</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16464</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">98.84</td>
+<td style="text-align: right;">1233846</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">99.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;">1.98</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">9530</td>
+<td style="text-align: right;">98.02</td>
+<td style="text-align: right;">0.77</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">26. History of diabetes mellitus</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16087</td>
+<td style="text-align: right;">1.30</td>
+<td style="text-align: right;">96.58</td>
+<td style="text-align: right;">1221354</td>
+<td style="text-align: right;">98.70</td>
+<td style="text-align: right;">98.23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">570</td>
+<td style="text-align: right;">2.52</td>
+<td style="text-align: right;">3.42</td>
+<td style="text-align: right;">22022</td>
+<td style="text-align: right;">97.48</td>
+<td style="text-align: right;">1.77</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">28. History of substance dependency</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16657</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">1243343</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">29. History of alcohol dependency</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">16657</td>
+<td style="text-align: right;">1.32</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">1243372</td>
+<td style="text-align: right;">98.68</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">0.00</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30a. LOS&gt;=3 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">4158</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">24.96</td>
+<td style="text-align: right;">739748</td>
+<td style="text-align: right;">99.44</td>
+<td style="text-align: right;">59.50</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">12499</td>
+<td style="text-align: right;">2.42</td>
+<td style="text-align: right;">75.04</td>
+<td style="text-align: right;">503628</td>
+<td style="text-align: right;">97.58</td>
+<td style="text-align: right;">40.50</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30b. LOS&gt;=4 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">9076</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: right;">54.49</td>
+<td style="text-align: right;">1055080</td>
+<td style="text-align: right;">99.15</td>
+<td style="text-align: right;">84.86</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">7581</td>
+<td style="text-align: right;">3.87</td>
+<td style="text-align: right;">45.51</td>
+<td style="text-align: right;">188296</td>
+<td style="text-align: right;">96.13</td>
+<td style="text-align: right;">15.14</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30c. LOS&gt;=5 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">12353</td>
+<td style="text-align: right;">1.05</td>
+<td style="text-align: right;">74.16</td>
+<td style="text-align: right;">1164125</td>
+<td style="text-align: right;">98.95</td>
+<td style="text-align: right;">93.63</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">4304</td>
+<td style="text-align: right;">5.15</td>
+<td style="text-align: right;">25.84</td>
+<td style="text-align: right;">79251</td>
+<td style="text-align: right;">94.85</td>
+<td style="text-align: right;">6.37</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30d. LOS&gt;=6 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">13933</td>
+<td style="text-align: right;">1.15</td>
+<td style="text-align: right;">83.65</td>
+<td style="text-align: right;">1199458</td>
+<td style="text-align: right;">98.85</td>
+<td style="text-align: right;">96.47</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">2724</td>
+<td style="text-align: right;">5.84</td>
+<td style="text-align: right;">16.35</td>
+<td style="text-align: right;">43918</td>
+<td style="text-align: right;">94.16</td>
+<td style="text-align: right;">3.53</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">30e. LOS&gt;=7 days</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">14672</td>
+<td style="text-align: right;">1.20</td>
+<td style="text-align: right;">88.08</td>
+<td style="text-align: right;">1211913</td>
+<td style="text-align: right;">98.80</td>
+<td style="text-align: right;">97.47</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">1985</td>
+<td style="text-align: right;">5.93</td>
+<td style="text-align: right;">11.92</td>
+<td style="text-align: right;">31463</td>
+<td style="text-align: right;">94.07</td>
+<td style="text-align: right;">2.53</td>
 </tr>
 </tbody>
 </table>
@@ -618,14 +1435,15 @@ wo/ SMM
 </div>
 </div>
 </section>
-<section id="lasso-regression-coefficients" class="level2">
-<h2 class="anchored" data-anchor-id="lasso-regression-coefficients">Lasso Regression Coefficients</h2>
+<section id="univariable-lasso-regression" class="level2">
+<h2 class="anchored" data-anchor-id="univariable-lasso-regression">Univariable Lasso Regression</h2>
+<p>The following table summarized univariate lasso regression results with <code>SMMANY_IND</code> as the outcome:</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="lightable-paper caption-top table table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th style="text-align: left;" data-quarto-table-cell-role="th">var_print</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">var_rklbl</th>
 <th style="text-align: left;" data-quarto-table-cell-role="th">cat</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">or_print</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">cf_lb_print</th>
@@ -635,300 +1453,998 @@ wo/ SMM
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">1a.Age</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">1.016</td>
-<td style="text-align: right;">1.014</td>
-<td style="text-align: right;">1.018</td>
+<td rowspan="5" style="text-align: left; vertical-align: top !important;">01.Age Group (ref:30-35)</td>
+<td style="text-align: left;">agegrp1 [10;20)</td>
+<td style="text-align: right;">1.460</td>
+<td style="text-align: right;">1.359</td>
+<td style="text-align: right;">1.568</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
 <tr class="even">
-<td rowspan="3" style="text-align: left; vertical-align: top !important;">1b.Age Group</td>
-<td style="text-align: left;">agegrp1</td>
-<td style="text-align: right;">2.032</td>
-<td style="text-align: right;">1.920</td>
-<td style="text-align: right;">2.151</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: left;">agegrp2 [20;25)</td>
+<td style="text-align: right;">1.051</td>
+<td style="text-align: right;">1.003</td>
+<td style="text-align: right;">1.102</td>
+<td style="text-align: right;">0.0360</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">agegrp3</td>
-<td style="text-align: right;">1.150</td>
-<td style="text-align: right;">1.117</td>
-<td style="text-align: right;">1.184</td>
+<td style="text-align: left;">agegrp3 [25;30)</td>
+<td style="text-align: right;">0.914</td>
+<td style="text-align: right;">0.875</td>
+<td style="text-align: right;">0.954</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">agegrp4</td>
-<td style="text-align: right;">1.503</td>
-<td style="text-align: right;">1.419</td>
-<td style="text-align: right;">1.592</td>
+<td style="text-align: left;">agegrp5 [35;40)</td>
+<td style="text-align: right;">1.307</td>
+<td style="text-align: right;">1.248</td>
+<td style="text-align: right;">1.369</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
 <tr class="odd">
-<td rowspan="6" style="text-align: left; vertical-align: top !important;">2.Race</td>
+<td style="text-align: left;">agegrp6 [40;55]</td>
+<td style="text-align: right;">1.894</td>
+<td style="text-align: right;">1.780</td>
+<td style="text-align: right;">2.015</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td rowspan="6" style="text-align: left; vertical-align: top !important;">02.Race (ref:White)</td>
 <td style="text-align: left;">American Indian or Alaska Native</td>
-<td style="text-align: right;">2.362</td>
-<td style="text-align: right;">2.176</td>
-<td style="text-align: right;">2.564</td>
+<td style="text-align: right;">2.285</td>
+<td style="text-align: right;">2.078</td>
+<td style="text-align: right;">2.512</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Asian</td>
-<td style="text-align: right;">1.860</td>
-<td style="text-align: right;">1.754</td>
-<td style="text-align: right;">1.973</td>
+<td style="text-align: right;">1.274</td>
+<td style="text-align: right;">1.180</td>
+<td style="text-align: right;">1.375</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Black or African American</td>
-<td style="text-align: right;">1.541</td>
-<td style="text-align: right;">1.479</td>
-<td style="text-align: right;">1.606</td>
+<td style="text-align: right;">1.516</td>
+<td style="text-align: right;">1.447</td>
+<td style="text-align: right;">1.588</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Native Hawaiian or Other Pacific Islander</td>
-<td style="text-align: right;">1.733</td>
-<td style="text-align: right;">1.457</td>
-<td style="text-align: right;">2.062</td>
+<td style="text-align: right;">1.656</td>
+<td style="text-align: right;">1.352</td>
+<td style="text-align: right;">2.029</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Other</td>
-<td style="text-align: right;">1.267</td>
-<td style="text-align: right;">1.215</td>
-<td style="text-align: right;">1.320</td>
-<td style="text-align: right;">0.0000</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Unknown</td>
-<td style="text-align: right;">1.269</td>
-<td style="text-align: right;">1.183</td>
-<td style="text-align: right;">1.360</td>
+<td style="text-align: right;">1.234</td>
+<td style="text-align: right;">1.177</td>
+<td style="text-align: right;">1.293</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
 <tr class="odd">
-<td rowspan="2" style="text-align: left; vertical-align: top !important;">3.Ethnicity</td>
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: right;">1.755</td>
+<td style="text-align: right;">1.641</td>
+<td style="text-align: right;">1.876</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">03.Ethnicity (ref:Non-Hispanic)</td>
 <td style="text-align: left;">Hispanic or Latino</td>
-<td style="text-align: right;">1.158</td>
-<td style="text-align: right;">1.125</td>
-<td style="text-align: right;">1.192</td>
+<td style="text-align: right;">1.159</td>
+<td style="text-align: right;">1.122</td>
+<td style="text-align: right;">1.197</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Unknown</td>
-<td style="text-align: right;">1.263</td>
-<td style="text-align: right;">1.168</td>
-<td style="text-align: right;">1.365</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">1.183</td>
+<td style="text-align: right;">1.083</td>
+<td style="text-align: right;">1.292</td>
+<td style="text-align: right;">0.0002</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">4.Segment</td>
+<tr class="even">
+<td style="text-align: left;">04.Segment (ref:Health System)</td>
 <td style="text-align: left;">Hospital</td>
-<td style="text-align: right;">1.148</td>
-<td style="text-align: right;">1.106</td>
-<td style="text-align: right;">1.191</td>
+<td style="text-align: right;">1.118</td>
+<td style="text-align: right;">1.072</td>
+<td style="text-align: right;">1.166</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="even">
-<td rowspan="4" style="text-align: left; vertical-align: top !important;">5.Speciality</td>
+<tr class="odd">
+<td rowspan="4" style="text-align: left; vertical-align: top !important;">05.Speciality (ref:Health System)</td>
 <td style="text-align: left;">Academic</td>
-<td style="text-align: right;">1.103</td>
-<td style="text-align: right;">1.055</td>
-<td style="text-align: right;">1.154</td>
+<td style="text-align: right;">1.125</td>
+<td style="text-align: right;">1.069</td>
+<td style="text-align: right;">1.183</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Acute Care Hospital</td>
+<td style="text-align: right;">1.025</td>
+<td style="text-align: right;">0.981</td>
 <td style="text-align: right;">1.071</td>
-<td style="text-align: right;">1.031</td>
-<td style="text-align: right;">1.113</td>
-<td style="text-align: right;">0.0004</td>
+<td style="text-align: right;">0.2686</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Childrens</td>
-<td style="text-align: right;">0.536</td>
-<td style="text-align: right;">0.361</td>
-<td style="text-align: right;">0.794</td>
-<td style="text-align: right;">0.0019</td>
+<td style="text-align: right;">0.535</td>
+<td style="text-align: right;">0.348</td>
+<td style="text-align: right;">0.823</td>
+<td style="text-align: right;">0.0044</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Critical Access Hospital</td>
-<td style="text-align: right;">1.110</td>
-<td style="text-align: right;">0.992</td>
-<td style="text-align: right;">1.243</td>
-<td style="text-align: right;">0.0684</td>
+<td style="text-align: right;">1.067</td>
+<td style="text-align: right;">0.937</td>
+<td style="text-align: right;">1.215</td>
+<td style="text-align: right;">0.3264</td>
 </tr>
-<tr class="even">
-<td rowspan="6" style="text-align: left; vertical-align: top !important;">6.Bed size</td>
+<tr class="odd">
+<td rowspan="6" style="text-align: left; vertical-align: top !important;">06.Bed size (ref:&gt;=1000)</td>
 <td style="text-align: left;">100-199</td>
-<td style="text-align: right;">1.515</td>
-<td style="text-align: right;">1.412</td>
-<td style="text-align: right;">1.627</td>
+<td style="text-align: right;">1.398</td>
+<td style="text-align: right;">1.289</td>
+<td style="text-align: right;">1.516</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">200-299</td>
-<td style="text-align: right;">1.632</td>
-<td style="text-align: right;">1.512</td>
-<td style="text-align: right;">1.762</td>
+<td style="text-align: right;">1.562</td>
+<td style="text-align: right;">1.431</td>
+<td style="text-align: right;">1.704</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">300-499</td>
-<td style="text-align: right;">0.848</td>
-<td style="text-align: right;">0.804</td>
-<td style="text-align: right;">0.893</td>
-<td style="text-align: right;">0.0000</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">500-999</td>
-<td style="text-align: right;">1.581</td>
-<td style="text-align: right;">1.533</td>
-<td style="text-align: right;">1.630</td>
+<td style="text-align: right;">0.836</td>
+<td style="text-align: right;">0.789</td>
+<td style="text-align: right;">0.887</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">&lt;100</td>
-<td style="text-align: right;">2.290</td>
-<td style="text-align: right;">2.151</td>
-<td style="text-align: right;">2.439</td>
+<td style="text-align: left;">500-999</td>
+<td style="text-align: right;">1.526</td>
+<td style="text-align: right;">1.474</td>
+<td style="text-align: right;">1.580</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">&lt;100</td>
+<td style="text-align: right;">2.167</td>
+<td style="text-align: right;">2.017</td>
+<td style="text-align: right;">2.328</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">NI</td>
 <td style="text-align: right;">0.000</td>
 <td style="text-align: right;">0.000</td>
 <td style="text-align: right;">Inf</td>
-<td style="text-align: right;">0.9982</td>
+<td style="text-align: right;">0.9970</td>
 </tr>
-<tr class="even">
-<td rowspan="9" style="text-align: left; vertical-align: top !important;">7.Zip code</td>
+<tr class="odd">
+<td rowspan="9" style="text-align: left; vertical-align: top !important;">07.Zip code (ref:9)</td>
 <td style="text-align: left;">0</td>
-<td style="text-align: right;">1.306</td>
-<td style="text-align: right;">1.247</td>
-<td style="text-align: right;">1.368</td>
+<td style="text-align: right;">1.259</td>
+<td style="text-align: right;">1.195</td>
+<td style="text-align: right;">1.327</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">1</td>
-<td style="text-align: right;">0.883</td>
-<td style="text-align: right;">0.838</td>
-<td style="text-align: right;">0.930</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.904</td>
+<td style="text-align: right;">0.853</td>
+<td style="text-align: right;">0.959</td>
+<td style="text-align: right;">0.0007</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">2</td>
-<td style="text-align: right;">0.884</td>
-<td style="text-align: right;">0.825</td>
-<td style="text-align: right;">0.947</td>
-<td style="text-align: right;">0.0005</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">3</td>
-<td style="text-align: right;">0.783</td>
+<td style="text-align: right;">0.806</td>
 <td style="text-align: right;">0.744</td>
-<td style="text-align: right;">0.823</td>
+<td style="text-align: right;">0.874</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">0.791</td>
+<td style="text-align: right;">0.747</td>
+<td style="text-align: right;">0.837</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">4</td>
-<td style="text-align: right;">0.694</td>
-<td style="text-align: right;">0.627</td>
-<td style="text-align: right;">0.769</td>
+<td style="text-align: right;">0.673</td>
+<td style="text-align: right;">0.599</td>
+<td style="text-align: right;">0.756</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">5</td>
-<td style="text-align: right;">1.078</td>
-<td style="text-align: right;">1.013</td>
-<td style="text-align: right;">1.147</td>
-<td style="text-align: right;">0.0176</td>
+<td style="text-align: right;">1.014</td>
+<td style="text-align: right;">0.945</td>
+<td style="text-align: right;">1.088</td>
+<td style="text-align: right;">0.7028</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">6</td>
-<td style="text-align: right;">1.234</td>
-<td style="text-align: right;">1.182</td>
-<td style="text-align: right;">1.288</td>
+<td style="text-align: right;">1.185</td>
+<td style="text-align: right;">1.129</td>
+<td style="text-align: right;">1.244</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">7</td>
-<td style="text-align: right;">0.583</td>
-<td style="text-align: right;">0.546</td>
-<td style="text-align: right;">0.623</td>
+<td style="text-align: right;">0.535</td>
+<td style="text-align: right;">0.495</td>
+<td style="text-align: right;">0.578</td>
 <td style="text-align: right;">0.0000</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">8</td>
-<td style="text-align: right;">0.392</td>
-<td style="text-align: right;">0.372</td>
+<td style="text-align: right;">0.423</td>
+<td style="text-align: right;">0.399</td>
+<td style="text-align: right;">0.448</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">08.Delivery type (ref:Vaginal)</td>
+<td style="text-align: left;">Vaginal</td>
+<td style="text-align: right;">3.024</td>
+<td style="text-align: right;">2.931</td>
+<td style="text-align: right;">3.120</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">12. History of hepatitis</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.714</td>
+<td style="text-align: right;">1.471</td>
+<td style="text-align: right;">1.997</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13. History of ischemic heart disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">2.784</td>
+<td style="text-align: right;">2.099</td>
+<td style="text-align: right;">3.694</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">14. History of asthma</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.217</td>
+<td style="text-align: right;">1.148</td>
+<td style="text-align: right;">1.289</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15. History of liver disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.829</td>
+<td style="text-align: right;">1.462</td>
+<td style="text-align: right;">2.287</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">16. History of atrial fibrillation</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">3.069</td>
+<td style="text-align: right;">2.177</td>
+<td style="text-align: right;">4.327</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">17. History of stroke</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">2.344</td>
+<td style="text-align: right;">1.377</td>
+<td style="text-align: right;">3.992</td>
+<td style="text-align: right;">0.0017</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18. History of chronic kidney disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">4.906</td>
+<td style="text-align: right;">3.927</td>
+<td style="text-align: right;">6.129</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">19. History of chronic obstructive pulmonary disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.044</td>
+<td style="text-align: right;">0.960</td>
+<td style="text-align: right;">1.135</td>
+<td style="text-align: right;">0.3116</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20. History of hypertension</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.579</td>
+<td style="text-align: right;">1.484</td>
+<td style="text-align: right;">1.681</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">21. History of heart failure</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">4.151</td>
+<td style="text-align: right;">3.083</td>
+<td style="text-align: right;">5.588</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">22. History of HIV/AIDS</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.280</td>
+<td style="text-align: right;">0.723</td>
+<td style="text-align: right;">2.265</td>
+<td style="text-align: right;">0.3969</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">23. History of peripheral vascular disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">2.188</td>
+<td style="text-align: right;">1.492</td>
+<td style="text-align: right;">3.209</td>
+<td style="text-align: right;">0.0001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">24. History of rheumatoid arthritis</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.793</td>
+<td style="text-align: right;">1.452</td>
+<td style="text-align: right;">2.213</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">25. History of autoimmune disorders</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.518</td>
+<td style="text-align: right;">1.315</td>
+<td style="text-align: right;">1.752</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">26. History of diabetes mellitus</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.965</td>
+<td style="text-align: right;">1.806</td>
+<td style="text-align: right;">2.139</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">28. History of substance dependency</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">0.9997</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">29. History of alcohol dependency</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">0.9999</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30a. LOS&gt;=3 days</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">4.415</td>
+<td style="text-align: right;">4.262</td>
+<td style="text-align: right;">4.574</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">30b. LOS&gt;=4 days</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">4.680</td>
+<td style="text-align: right;">4.538</td>
+<td style="text-align: right;">4.827</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30c. LOS&gt;=5 days</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">5.118</td>
+<td style="text-align: right;">4.940</td>
+<td style="text-align: right;">5.303</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">30d. LOS&gt;=6 days</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">5.340</td>
+<td style="text-align: right;">5.119</td>
+<td style="text-align: right;">5.569</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30e. LOS&gt;=7 days</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">5.211</td>
+<td style="text-align: right;">4.966</td>
+<td style="text-align: right;">5.469</td>
+<td style="text-align: right;">0.0000</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</section>
+<section id="multiple-lasso-regression-coefficients" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-lasso-regression-coefficients">Multiple Lasso Regression Coefficients</h2>
+<p>The following table summarized multiple lasso regression results with <code>SMMANY_IND</code> as the outcome and a restricted list of covariates:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="lightable-paper caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">var_rklbl</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">cat</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">or_print</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cf_lb_print</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cf_ub_print</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="5" style="text-align: left; vertical-align: top !important;">01.Age Group (ref:30-35)</td>
+<td style="text-align: left;">agegrp1 [10;20)</td>
+<td style="text-align: right;">1.733</td>
+<td style="text-align: right;">1.700</td>
+<td style="text-align: right;">1.761</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">agegrp2 [20;25)</td>
+<td style="text-align: right;">1.173</td>
+<td style="text-align: right;">1.158</td>
+<td style="text-align: right;">1.195</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">agegrp3 [25;30)</td>
+<td style="text-align: right;">0.974</td>
+<td style="text-align: right;">0.960</td>
+<td style="text-align: right;">0.987</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">agegrp5 [35;40)</td>
+<td style="text-align: right;">1.186</td>
+<td style="text-align: right;">1.175</td>
+<td style="text-align: right;">1.199</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">agegrp6 [40;55]</td>
+<td style="text-align: right;">1.449</td>
+<td style="text-align: right;">1.425</td>
+<td style="text-align: right;">1.473</td>
+</tr>
+<tr class="even">
+<td rowspan="6" style="text-align: left; vertical-align: top !important;">02.Race (ref:White)</td>
+<td style="text-align: left;">American Indian or Alaska Native</td>
+<td style="text-align: right;">2.884</td>
+<td style="text-align: right;">2.815</td>
+<td style="text-align: right;">2.953</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asian</td>
+<td style="text-align: right;">1.263</td>
+<td style="text-align: right;">1.232</td>
+<td style="text-align: right;">1.308</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Black or African American</td>
+<td style="text-align: right;">1.318</td>
+<td style="text-align: right;">1.307</td>
+<td style="text-align: right;">1.341</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Native Hawaiian or Other Pacific Islander</td>
+<td style="text-align: right;">1.470</td>
+<td style="text-align: right;">1.407</td>
+<td style="text-align: right;">1.549</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">1.002</td>
+<td style="text-align: right;">0.988</td>
+<td style="text-align: right;">1.017</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: right;">1.581</td>
+<td style="text-align: right;">1.531</td>
+<td style="text-align: right;">1.609</td>
+</tr>
+<tr class="even">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">03.Ethnicity (ref:Non-Hispanic)</td>
+<td style="text-align: left;">Hispanic or Latino</td>
+<td style="text-align: right;">1.230</td>
+<td style="text-align: right;">1.218</td>
+<td style="text-align: right;">1.241</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: right;">0.987</td>
+<td style="text-align: right;">0.970</td>
+<td style="text-align: right;">1.002</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">04.Segment (ref:Health System)</td>
+<td style="text-align: left;">Hospital</td>
+<td style="text-align: right;">1.558</td>
+<td style="text-align: right;">1.532</td>
+<td style="text-align: right;">1.637</td>
+</tr>
+<tr class="odd">
+<td rowspan="4" style="text-align: left; vertical-align: top !important;">05.Speciality (ref:Health System)</td>
+<td style="text-align: left;">Academic</td>
+<td style="text-align: right;">0.703</td>
+<td style="text-align: right;">0.693</td>
+<td style="text-align: right;">0.714</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Acute Care Hospital</td>
 <td style="text-align: right;">0.413</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.393</td>
+<td style="text-align: right;">0.422</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">8a.LOS</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">1.000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: left;">Childrens</td>
+<td style="text-align: right;">0.130</td>
+<td style="text-align: right;">0.107</td>
+<td style="text-align: right;">0.140</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">8b.LOS&gt;1day</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">0.772</td>
-<td style="text-align: right;">0.624</td>
-<td style="text-align: right;">0.954</td>
-<td style="text-align: right;">0.0166</td>
+<td style="text-align: left;">Critical Access Hospital</td>
+<td style="text-align: right;">0.201</td>
+<td style="text-align: right;">0.185</td>
+<td style="text-align: right;">0.215</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">8c.LOS&gt;2day</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">4.029</td>
-<td style="text-align: right;">3.747</td>
-<td style="text-align: right;">4.332</td>
-<td style="text-align: right;">0.0000</td>
+<td rowspan="6" style="text-align: left; vertical-align: top !important;">06.Bed size (ref:&gt;=1000)</td>
+<td style="text-align: left;">100-199</td>
+<td style="text-align: right;">1.400</td>
+<td style="text-align: right;">1.353</td>
+<td style="text-align: right;">1.431</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">8d.LOS&gt;3day</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">4.384</td>
-<td style="text-align: right;">4.250</td>
-<td style="text-align: right;">4.522</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: left;">200-299</td>
+<td style="text-align: right;">5.021</td>
+<td style="text-align: right;">4.849</td>
+<td style="text-align: right;">5.211</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">8e.LOS&gt;4day</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">4.670</td>
-<td style="text-align: right;">4.544</td>
-<td style="text-align: right;">4.800</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: left;">300-499</td>
+<td style="text-align: right;">1.211</td>
+<td style="text-align: right;">1.175</td>
+<td style="text-align: right;">1.246</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">8f.LOS&gt;5day</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">5.135</td>
-<td style="text-align: right;">4.974</td>
-<td style="text-align: right;">5.301</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: left;">500-999</td>
+<td style="text-align: right;">1.946</td>
+<td style="text-align: right;">1.911</td>
+<td style="text-align: right;">1.965</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">8g.LOS&gt;6day</td>
-<td style="text-align: left;">NA</td>
-<td style="text-align: right;">5.503</td>
-<td style="text-align: right;">5.295</td>
-<td style="text-align: right;">5.719</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: left;">&lt;100</td>
+<td style="text-align: right;">3.061</td>
+<td style="text-align: right;">2.986</td>
+<td style="text-align: right;">3.132</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">8h.LOS&gt;7day</td>
+<td style="text-align: left;">NI</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td rowspan="9" style="text-align: left; vertical-align: top !important;">07.Zip code (ref:9)</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">0.771</td>
+<td style="text-align: right;">0.764</td>
+<td style="text-align: right;">0.791</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">0.683</td>
+<td style="text-align: right;">0.673</td>
+<td style="text-align: right;">0.699</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">0.429</td>
+<td style="text-align: right;">0.420</td>
+<td style="text-align: right;">0.440</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">0.566</td>
+<td style="text-align: right;">0.555</td>
+<td style="text-align: right;">0.579</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">0.600</td>
+<td style="text-align: right;">0.577</td>
+<td style="text-align: right;">0.612</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">0.949</td>
+<td style="text-align: right;">0.917</td>
+<td style="text-align: right;">0.971</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">0.995</td>
+<td style="text-align: right;">0.982</td>
+<td style="text-align: right;">1.009</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: right;">0.573</td>
+<td style="text-align: right;">0.560</td>
+<td style="text-align: right;">0.583</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">0.373</td>
+<td style="text-align: right;">0.367</td>
+<td style="text-align: right;">0.380</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">08.Delivery type (ref:Vaginal)</td>
+<td style="text-align: left;">Vaginal</td>
+<td style="text-align: right;">2.652</td>
+<td style="text-align: right;">2.632</td>
+<td style="text-align: right;">2.672</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">30e. LOS&gt;=7 days</td>
 <td style="text-align: left;">NA</td>
-<td style="text-align: right;">5.534</td>
-<td style="text-align: right;">5.293</td>
-<td style="text-align: right;">5.786</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">4.501</td>
+<td style="text-align: right;">4.451</td>
+<td style="text-align: right;">4.578</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>The following table summarized multiple lasso regression results with <code>SMMANY_IND</code> as the outcome and an expansive list of covariates:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="lightable-paper caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">var_rklbl</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">cat</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">or_print</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cf_lb_print</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">cf_ub_print</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="5" style="text-align: left; vertical-align: top !important;">01.Age Group (ref:30-35)</td>
+<td style="text-align: left;">agegrp1 [10;20)</td>
+<td style="text-align: right;">1.736</td>
+<td style="text-align: right;">1.695</td>
+<td style="text-align: right;">1.784</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">agegrp2 [20;25)</td>
+<td style="text-align: right;">1.181</td>
+<td style="text-align: right;">1.163</td>
+<td style="text-align: right;">1.202</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">agegrp3 [25;30)</td>
+<td style="text-align: right;">0.973</td>
+<td style="text-align: right;">0.966</td>
+<td style="text-align: right;">0.985</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">agegrp5 [35;40)</td>
+<td style="text-align: right;">1.177</td>
+<td style="text-align: right;">1.165</td>
+<td style="text-align: right;">1.200</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">agegrp6 [40;55]</td>
+<td style="text-align: right;">1.424</td>
+<td style="text-align: right;">1.399</td>
+<td style="text-align: right;">1.449</td>
+</tr>
+<tr class="even">
+<td rowspan="6" style="text-align: left; vertical-align: top !important;">02.Race (ref:White)</td>
+<td style="text-align: left;">American Indian or Alaska Native</td>
+<td style="text-align: right;">2.835</td>
+<td style="text-align: right;">2.763</td>
+<td style="text-align: right;">2.896</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Asian</td>
+<td style="text-align: right;">1.281</td>
+<td style="text-align: right;">1.249</td>
+<td style="text-align: right;">1.307</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Black or African American</td>
+<td style="text-align: right;">1.308</td>
+<td style="text-align: right;">1.293</td>
+<td style="text-align: right;">1.326</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Native Hawaiian or Other Pacific Islander</td>
+<td style="text-align: right;">1.471</td>
+<td style="text-align: right;">1.357</td>
+<td style="text-align: right;">1.539</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Other</td>
+<td style="text-align: right;">1.006</td>
+<td style="text-align: right;">0.993</td>
+<td style="text-align: right;">1.021</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: right;">1.596</td>
+<td style="text-align: right;">1.570</td>
+<td style="text-align: right;">1.635</td>
+</tr>
+<tr class="even">
+<td rowspan="2" style="text-align: left; vertical-align: top !important;">03.Ethnicity (ref:Non-Hispanic)</td>
+<td style="text-align: left;">Hispanic or Latino</td>
+<td style="text-align: right;">1.230</td>
+<td style="text-align: right;">1.219</td>
+<td style="text-align: right;">1.238</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Unknown</td>
+<td style="text-align: right;">1.009</td>
+<td style="text-align: right;">0.967</td>
+<td style="text-align: right;">1.030</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">04.Segment (ref:Health System)</td>
+<td style="text-align: left;">Hospital</td>
+<td style="text-align: right;">1.539</td>
+<td style="text-align: right;">1.497</td>
+<td style="text-align: right;">1.586</td>
+</tr>
+<tr class="odd">
+<td rowspan="4" style="text-align: left; vertical-align: top !important;">05.Speciality (ref:Health System)</td>
+<td style="text-align: left;">Academic</td>
+<td style="text-align: right;">0.694</td>
+<td style="text-align: right;">0.674</td>
+<td style="text-align: right;">0.706</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Acute Care Hospital</td>
+<td style="text-align: right;">0.416</td>
+<td style="text-align: right;">0.407</td>
+<td style="text-align: right;">0.431</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Childrens</td>
+<td style="text-align: right;">0.129</td>
+<td style="text-align: right;">0.105</td>
+<td style="text-align: right;">0.140</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Critical Access Hospital</td>
+<td style="text-align: right;">0.204</td>
+<td style="text-align: right;">0.197</td>
+<td style="text-align: right;">0.212</td>
+</tr>
+<tr class="odd">
+<td rowspan="6" style="text-align: left; vertical-align: top !important;">06.Bed size (ref:&gt;=1000)</td>
+<td style="text-align: left;">100-199</td>
+<td style="text-align: right;">1.412</td>
+<td style="text-align: right;">1.373</td>
+<td style="text-align: right;">1.446</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">200-299</td>
+<td style="text-align: right;">4.955</td>
+<td style="text-align: right;">4.750</td>
+<td style="text-align: right;">5.125</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">300-499</td>
+<td style="text-align: right;">1.210</td>
+<td style="text-align: right;">1.181</td>
+<td style="text-align: right;">1.230</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">500-999</td>
+<td style="text-align: right;">1.931</td>
+<td style="text-align: right;">1.892</td>
+<td style="text-align: right;">1.956</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&lt;100</td>
+<td style="text-align: right;">3.064</td>
+<td style="text-align: right;">2.974</td>
+<td style="text-align: right;">3.149</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NI</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td rowspan="9" style="text-align: left; vertical-align: top !important;">07.Zip code (ref:9)</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">0.764</td>
+<td style="text-align: right;">0.749</td>
+<td style="text-align: right;">0.782</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">0.685</td>
+<td style="text-align: right;">0.672</td>
+<td style="text-align: right;">0.700</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">0.425</td>
+<td style="text-align: right;">0.414</td>
+<td style="text-align: right;">0.435</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">0.561</td>
+<td style="text-align: right;">0.547</td>
+<td style="text-align: right;">0.579</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">0.588</td>
+<td style="text-align: right;">0.564</td>
+<td style="text-align: right;">0.618</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">0.938</td>
+<td style="text-align: right;">0.921</td>
+<td style="text-align: right;">0.955</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: right;">0.997</td>
+<td style="text-align: right;">0.984</td>
+<td style="text-align: right;">1.014</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: right;">0.575</td>
+<td style="text-align: right;">0.561</td>
+<td style="text-align: right;">0.589</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">0.374</td>
+<td style="text-align: right;">0.367</td>
+<td style="text-align: right;">0.380</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">08.Delivery type (ref:Vaginal)</td>
+<td style="text-align: left;">Vaginal</td>
+<td style="text-align: right;">2.636</td>
+<td style="text-align: right;">2.605</td>
+<td style="text-align: right;">2.657</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">12. History of hepatitis</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.405</td>
+<td style="text-align: right;">1.343</td>
+<td style="text-align: right;">1.472</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">13. History of ischemic heart disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.433</td>
+<td style="text-align: right;">1.335</td>
+<td style="text-align: right;">1.556</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">14. History of asthma</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.076</td>
+<td style="text-align: right;">1.056</td>
+<td style="text-align: right;">1.095</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15. History of liver disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.300</td>
+<td style="text-align: right;">1.178</td>
+<td style="text-align: right;">1.376</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">16. History of atrial fibrillation</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">2.261</td>
+<td style="text-align: right;">1.959</td>
+<td style="text-align: right;">2.430</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">17. History of stroke</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.332</td>
+<td style="text-align: right;">1.102</td>
+<td style="text-align: right;">1.524</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">18. History of chronic kidney disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">2.121</td>
+<td style="text-align: right;">1.948</td>
+<td style="text-align: right;">2.290</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">20. History of hypertension</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.053</td>
+<td style="text-align: right;">1.038</td>
+<td style="text-align: right;">1.076</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">21. History of heart failure</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.585</td>
+<td style="text-align: right;">1.384</td>
+<td style="text-align: right;">1.775</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">23. History of peripheral vascular disease</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.470</td>
+<td style="text-align: right;">1.294</td>
+<td style="text-align: right;">1.656</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">24. History of rheumatoid arthritis</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.334</td>
+<td style="text-align: right;">1.226</td>
+<td style="text-align: right;">1.447</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">25. History of autoimmune disorders</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.169</td>
+<td style="text-align: right;">1.119</td>
+<td style="text-align: right;">1.227</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">26. History of diabetes mellitus</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">1.087</td>
+<td style="text-align: right;">1.064</td>
+<td style="text-align: right;">1.107</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30e. LOS&gt;=7 days</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: right;">4.440</td>
+<td style="text-align: right;">4.362</td>
+<td style="text-align: right;">4.486</td>
 </tr>
 </tbody>
 </table>

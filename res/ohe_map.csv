@@ -9,12 +9,12 @@ race_source_value_ohe,6,White
 ethnicity_source_value_ohe,0,Unknown
 ethnicity_source_value_ohe,1,Hispanic or Latino
 ethnicity_source_value_ohe,2,Non-Hispanic
-agegrp_at_event_ohe,0,agegrp1
-agegrp_at_event_ohe,1,agegrp6
-agegrp_at_event_ohe,2,agegrp5
-agegrp_at_event_ohe,3,agegrp2
-agegrp_at_event_ohe,4,agegrp3
-agegrp_at_event_ohe,5,agegrp4
+agegrp_at_event_ohe,0,agegrp1 [10;20)
+agegrp_at_event_ohe,1,agegrp6 [40;55]
+agegrp_at_event_ohe,2,agegrp5 [35;40)
+agegrp_at_event_ohe,3,agegrp2 [20;25)
+agegrp_at_event_ohe,4,agegrp3 [25;30)
+agegrp_at_event_ohe,5,agegrp4 [30;35)
 bed_size_ohe,0,NI
 bed_size_ohe,1,200-299
 bed_size_ohe,2,<100
@@ -39,8 +39,8 @@ zip_code_ohe,6,3
 zip_code_ohe,7,6
 zip_code_ohe,8,8
 zip_code_ohe,9,9
-delivery_type_ohe,0,d_v
-delivery_type_ohe,1,d_c
+delivery_type_ohe,0,Vaginal
+delivery_type_ohe,1,C-section
 
 
 

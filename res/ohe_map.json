@@ -14,12 +14,12 @@
     "2": "Non-Hispanic"
   },
  "agegrp_at_event": {
-    "0": "agegrp1",
-    "1": "agegrp6",
-    "2": "agegrp5",
-    "3": "agegrp2",
-    "4": "agegrp3",
-    "5": "agegrp4"
+    "0": "agegrp1 [10,20)",
+    "1": "agegrp6 [40,55]",
+    "2": "agegrp5 [35,40)",
+    "3": "agegrp2 [20,25)",
+    "4": "agegrp3 [25,30)",
+    "5": "agegrp4 [30,35)"
   },
  "bed_size": {
     "0": "NI",
@@ -54,7 +54,7 @@
     "9": "9"
   },
 "delivery_type": {
-    "0": "d_c", 
-    "1": "d_v"
+    "0": "C-secion", 
+    "1": "Vaginal"
   }
 }

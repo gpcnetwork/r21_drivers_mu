@@ -11,7 +11,8 @@ editor: visual
 
 pacman::p_load(
   tidyverse,
-  kableExtra
+  kableExtra,
+  stringr
 )
 
 path_to_res<-file.path(
@@ -20,18 +21,22 @@ path_to_res<-file.path(
 )
 
 denom<-read.csv(file.path(path_to_res,"denom_summ.csv"),stringsAsFactors = F)
+var_map<-read.csv(file.path(path_to_res,"var_map.csv"),stringsAsFactors = F)
 ```
 
 ## Overall Descriptive Summary
 
 Oracle Cerner Real World EHR Database recently had released their 2024/08 data in both source and OMOP format. Following the same inclusion and exclusion criteria as below:
-- Delivery events identified by DRG, ICD, or CPT codes defined in: 
-- Delivery events occured between 2051-01-01 and 2023-12-31 (de-identified dates) 
-- At least 211 days since the last delivery event in the time period
-- Maternal age between 10 years and 54 years of age 
 
-We identified a total of `r denom$N_delivery` pregnancy events among `r denom$N_init_delivery` individuals. We will focus the analysis on the `r denom$N_init_delivery` initial pregnancy events. 
+-   Delivery events identified by DRG, ICD, or CPT codes defined in [here](https://github.com/gpcnetwork/r21_drivers_mu/blob/main/ref/vs-mmm-delivery.json)
 
+-   Delivery events occurred between 2015-01-01 and 2023-12-31 (de-identified dates)
+
+-   Delivery episode grouping: at least 211 days since the last delivery event in the time period
+
+-   Maternal age between 10 years and 55 years of age
+
+We identified a total of `r denom$N_delivery` pregnancy events among `r denom$N_init_delivery` individuals. We will focus the analysis on the `r denom$N_init_delivery` initial pregnancy events.The following table gives the overall summary of the study cohort, where agegrp1 defines as '\<20 yo', agegrp2 to agegrp5 are 5-years incrementals, and agegrp6 is '\>=40 yo'.
 
 ```{r}
 #| label: init-summary
@@ -39,25 +44,10 @@ We identified a total of `r denom$N_delivery` pregnancy events among `r denom$N_
 #| echo: false
 
 destbl<-read.csv(file.path(path_to_res,"summ_init_cat.csv"),stringsAsFactors = F) %>%
-  mutate(
-    var_print = recode(
-      var,
-      "agegrp_at_event" = "1.Age",
-      "race_source_value" = "2.Race",
-      "ethnicity_source_value" = "3.Ethnicity",
-      "segment" = "4.Segment",
-      "speciality" = "5.Speciality",
-      "bed_size" = "6.Bed size",
-      "zip_code" = "7.Zip code",
-      "death_ind" = "8.Death indicator",
-      "SMMANY_ind" = "9.SMM indicator",
-      "SMMANY90PCT_ind" = "10.SMM indicator (adjusted by 90 percentile LOS)",
-      "BPT_ind" = "11.history of ",
-    )
-  ) %>%
-  arrange(var_print,cat) %>%
+  inner_join(var_map,by="var") %>%
+  arrange(var_rklbl,cat) %>%
   mutate(perc = round(prop*100,2)) %>%
-  select(var_print, cat, count, perc)
+  select(var_rklbl, cat, count, perc)
 
 destbl %>%
   kbl() %>% 
@@ -65,6 +55,7 @@ destbl %>%
   kable_paper(full_width = F)
 ```
 
+The table below reports column-wise (col_p1,col_p0) and row-wise (row_p1, row_p0) percentages stratified SMM status, \`SMMANY_IND\`:
 
 ```{r}
 #| label: stratified-summary
@@ -72,75 +63,134 @@ destbl %>%
 #| echo: false
 
 strtbl<-read.csv(file.path(path_to_res,"summ_init_cat_smm.csv"),stringsAsFactors = F) %>%
-  mutate(
-    var_print = recode(
-      var,
-      "agegrp_at_event" = "1.Age",
-      "race_source_value" = "2.Race",
-      "ethnicity_source_value" = "3.Ethnicity",
-      "segment" = "4.Segment",
-      "speciality" = "5.Speciality",
-      "bed_size" = "6.Bed size",
-      "zip_code" = "7.Zip code",
-      "death_ind" = "8.Death indicator",
-      "SMMANY_ind" = "9.SMM indicator"
-    )
+  group_by(var,cat) %>%
+  mutate(rsum = sum(count)) %>%
+  ungroup %>%
+  mutate(perc = round(count/rsum*100,2),perc_t = 'r') %>%
+  select(var,cat,count,SMMANY_IND,perc,perc_t) %>%
+  bind_rows(
+    read.csv(file.path(path_to_res,"summ_init_cat_smm.csv"),stringsAsFactors = F) %>%
+      group_by(var,SMMANY_IND) %>%
+      mutate(csum = sum(count)) %>%
+      ungroup %>%
+      mutate(perc = round(count/csum*100,2),perc_t = 'c') %>%
+      select(var,cat,count,SMMANY_IND,perc,perc_t)
   ) %>%
-  arrange(var_print,cat) %>%
-  mutate(perc = round(prop*100,2)) %>%
-  select(var_print, cat, count, perc, SMMANY_IND) %>%
   pivot_wider(
-    names_from = SMMANY_IND,
+    names_from = c(SMMANY_IND,perc_t),
     values_from = c(count,perc)
   ) %>%
-  select(var_print,cat,count_1,perc_1,count_0,perc_0)
+  inner_join(var_map,by="var") %>%
+  select(var_rklbl,cat,count_1_r,perc_1_r,perc_1_c,count_0_r,perc_0_r,perc_0_c) %>%
+  rename(
+    n1 = count_1_r,
+    row_p1 = perc_1_r,
+    col_p1 = perc_1_c,
+    n0 = count_0_r,
+    row_p0 = perc_0_r,
+    col_p0 = perc_0_c
+  ) %>%
+  arrange(var_rklbl,cat)
 
 strtbl %>%
   kbl() %>% 
-  add_header_above(c(" "," ","w/ SMM"=2,"wo/ SMM"=2)) %>%
+  add_header_above(c(" "," ","w/ SMM"=3,"wo/ SMM"=3)) %>%
   collapse_rows(columns = 1:1, valign = "top") %>%
   kable_paper(full_width = F)
 ```
 
-## Lasso Regression Coefficients
+## Univariable Lasso Regression
+
+The following table summarized univariate lasso regression results with `SMMANY_IND` as the outcome:
 
 ```{r}
-#| label: reg-result
+#| label: uni-result
 #| message: false
 #| echo: false
 
-regtbl<-read.csv(file.path(path_to_res,"univar_filter_init.csv"),stringsAsFactors = F) %>%
+unireg<-read.csv(file.path(path_to_res,"univar_filter_init.csv"),stringsAsFactors = F) %>%
   filter(outcome == "SMMANY_ind") %>%
   left_join(read.csv(file.path(path_to_res,"ohe_map.csv"),stringsAsFactors = F),by=c("var","encoded")) %>%
+  mutate(var_orig = gsub("_ohe","",var)) %>%
+  inner_join(var_map,by=c("var_orig"="var")) %>%
   mutate(
-    var_print = recode(
-      var,
-      "age_at_event" = "1a.Age",
-      "agegrp_at_event_ohe" = "1b.Age Group",
-      "race_source_value_ohe" = "2.Race",
-      "ethnicity_source_value_ohe" = "3.Ethnicity",
-      "segment_ohe" = "4.Segment",
-      "speciality_ohe" = "5.Speciality",
-      "bed_size_ohe" = "6.Bed size",
-      "zip_code_ohe" = "7.Zip code",
-      "los" = "8a.LOS",
-      "los1up_ind" = "8b.LOS>1day",
-      "los2up_ind" = "8c.LOS>2day",
-      "los3up_ind" = "8d.LOS>3day",
-      "los4up_ind" = "8e.LOS>4day",
-      "los5up_ind" = "8f.LOS>5day",
-      "los6up_ind" = "8g.LOS>6day",
-      "los7up_ind" = "8h.LOS>7day"
-    ),
     pval_print = round(pval,4),
     or_print = round(odds_ratio,3),
     cf_lb_print = round(conf_lower,3),
     cf_ub_print = round(conf_upper,3)
   ) %>%
-  arrange(var_print,cat) %>%
-  select(var_print,cat,or_print,cf_lb_print,cf_ub_print,pval_print)
+  arrange(var_rklbl,cat) %>%
+  select(var_rklbl,cat,or_print,cf_lb_print,cf_ub_print,pval_print)
 
-regtbl %>%
+unireg %>%
+  kbl() %>% 
+  collapse_rows(columns = 1:1, valign = "top") %>%
+  kable_paper(full_width = F)
+```
+
+## Multiple Lasso Regression Coefficients
+
+The following table summarized multiple lasso regression results with `SMMANY_IND` as the outcome and a restricted list of covariates:
+
+```{r}
+#| label: reg-result-sm
+#| message: false
+#| echo: false
+
+multireg<-read.csv(file.path(path_to_res,"multilasso_smmany_filter_init.csv"),stringsAsFactors = F) %>%
+  mutate(
+    var = str_remove(feature, "_\\d+$"),
+    encoded = str_extract(feature, "(?<=_)\\d+"),
+    encoded = as.numeric(encoded)
+  ) %>%
+  left_join(
+    read.csv(file.path(path_to_res,"ohe_map.csv"),stringsAsFactors = F) %>%
+      mutate(var = gsub("_ohe","",var)),
+    by=c("var","encoded")) %>%
+  inner_join(var_map,by="var") %>%
+  mutate(
+    or_print = round(exp(coef),3),
+    cf_lb_print = round(exp(lower),3),
+    cf_ub_print = round(exp(upper),3)
+  ) %>%
+  arrange(var_rklbl,cat) %>%
+  select(var_rklbl,cat,or_print,cf_lb_print,cf_ub_print)
+
+multireg %>%
+  kbl() %>% 
+  collapse_rows(columns = 1:1, valign = "top") %>%
+  kable_paper(full_width = F)
+
+```
+
+The following table summarized multiple lasso regression results with `SMMANY_IND` as the outcome and an expansive list of covariates:
+
+```{r}
+#| label: reg-result-lg
+#| message: false
+#| echo: false
+
+multireg2<-read.csv(file.path(path_to_res,"multilasso_smmany_filter_init2.csv"),stringsAsFactors = F) %>%
+  mutate(
+    var = str_remove(feature, "_\\d+$"),
+    encoded = str_extract(feature, "(?<=_)\\d+"),
+    encoded = as.numeric(encoded)
+  ) %>%
+  left_join(
+    read.csv(file.path(path_to_res,"ohe_map.csv"),stringsAsFactors = F) %>%
+      mutate(var = gsub("_ohe","",var)),
+    by=c("var","encoded")
+  ) %>%
+  inner_join(var_map,by="var") %>%
+  mutate(
+    or_print = round(exp(coef),3),
+    cf_lb_print = round(exp(lower),3),
+    cf_ub_print = round(exp(upper),3)
+  ) %>%
+  arrange(var_rklbl,cat) %>%
+  select(var_rklbl,cat,or_print,cf_lb_print,cf_ub_print)
+
+multireg2 %>%
   kbl() %>% 
   collapse_rows(columns = 1:1, valign = "top") %>%
   kable_paper(full_width = F)
