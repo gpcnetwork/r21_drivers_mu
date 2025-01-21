@@ -1,0 +1,456 @@
+id,name,description,codesystem,code
+C0020542,PHT,pulmonary hypertension,icd9cm,416.0
+C0020542,PHT,pulmonary hypertension,icd9cm,416.8
+C0020542,PHT,pulmonary hypertension,icd9cm,416.9
+C0020542,PHT,pulmonary hypertension,icd10cm,I27.0
+C0020542,PHT,pulmonary hypertension,icd10cm,I27.2
+C0341950,PEC,Preeclampsia with severe features,icd9cm,642.5
+C0341950,PEC,Preeclampsia with severe features,icd9cm,642.7
+C0341950,PEC,Preeclampsia with severe features,icd10cm,O11
+C0341950,PEC,Preeclampsia with severe features,icd10cm,O14.1
+C0341950,PEC,Preeclampsia with severe features,icd10cm,O14.2
+C0269658,GHT,Preeclampsia without severe features or gestational hypertension,icd9cm,642.3
+C0269658,GHT,Preeclampsia without severe features or gestational hypertension,icd9cm,642.4
+C0269658,GHT,Preeclampsia without severe features or gestational hypertension,icd10cm,O13
+C0269658,GHT,Preeclampsia without severe features or gestational hypertension,icd10cm,O14.0
+C0269658,GHT,Preeclampsia without severe features or gestational hypertension,icd10cm,O14.9
+M0341951,PAS,Placenta accreta spectrum,icd9cm,665.0
+M0341951,PAS,Placenta accreta spectrum,icd9cm,665.10
+M0341951,PAS,Placenta accreta spectrum,icd9cm,665.11
+M0341951,PAS,Placenta accreta spectrum,icd9cm,641.01
+M0341951,PAS,Placenta accreta spectrum,icd9cm,641.11
+M0341951,PAS,Placenta accreta spectrum,icd9cm,666.0
+M0341951,PAS,Placenta accreta spectrum,icd9cm,667
+M0341951,PAS,Placenta accreta spectrum,icd9proc,68.3
+M0341951,PAS,Placenta accreta spectrum,icd9proc,68.4
+M0341951,PAS,Placenta accreta spectrum,icd9proc,68.5
+M0341951,PAS,Placenta accreta spectrum,icd9proc,68.6
+M0341951,PAS,Placenta accreta spectrum,icd9proc,68.7
+M0341951,PAS,Placenta accreta spectrum,icd9proc,68.8
+M0341951,PAS,Placenta accreta spectrum,icd9proc,68.9
+M0341951,PAS,Placenta accreta spectrum,icd10cm,O43.213
+M0341951,PAS,Placenta accreta spectrum,icd10cm,O43.223
+M0341951,PAS,Placenta accreta spectrum,icd10cm,O43.233
+C1561643,CKD,chronic kidney disease,icd9cm,403
+C1561643,CKD,chronic kidney disease,icd9cm,404
+C1561643,CKD,chronic kidney disease,icd9cm,581
+C1561643,CKD,chronic kidney disease,icd9cm,582
+C1561643,CKD,chronic kidney disease,icd9cm,583
+C1561643,CKD,chronic kidney disease,icd9cm,585
+C1561643,CKD,chronic kidney disease,icd9cm,587
+C1561643,CKD,chronic kidney disease,icd9cm,588
+C1561643,CKD,chronic kidney disease,icd9cm,642.1
+C1561643,CKD,chronic kidney disease,icd9cm,753
+C1561643,CKD,chronic kidney disease,icd9cm,250.4 249.4
+C1561643,CKD,chronic kidney disease,icd9cm,710.0
+C1561643,CKD,chronic kidney disease,icd10cm,O10.2
+C1561643,CKD,chronic kidney disease,icd10cm,O10.3
+C1561643,CKD,chronic kidney disease,icd10cm,O26.83
+C1561643,CKD,chronic kidney disease,icd10cm,I12
+C1561643,CKD,chronic kidney disease,icd10cm,I13
+C1561643,CKD,chronic kidney disease,icd10cm,N03
+C1561643,CKD,chronic kidney disease,icd10cm,N04
+C1561643,CKD,chronic kidney disease,icd10cm,N05
+C1561643,CKD,chronic kidney disease,icd10cm,N07
+C1561643,CKD,chronic kidney disease,icd10cm,N08
+C1561643,CKD,chronic kidney disease,icd10cm,N11.1
+C1561643,CKD,chronic kidney disease,icd10cm,N11.8
+C1561643,CKD,chronic kidney disease,icd10cm,N11.9
+C1561643,CKD,chronic kidney disease,icd10cm,N18
+C1561643,CKD,chronic kidney disease,icd10cm,N25.0
+C1561643,CKD,chronic kidney disease,icd10cm,N25.1
+C1561643,CKD,chronic kidney disease,icd10cm,N25.81
+C1561643,CKD,chronic kidney disease,icd10cm,N25.89
+C1561643,CKD,chronic kidney disease,icd10cm,N25.9
+C1561643,CKD,chronic kidney disease,icd10cm,N26.9
+C0559157,HistHD,H/O: heart diorder,icd9cm,394
+C0559157,HistHD,H/O: heart diorder,icd9cm,395
+C0559157,HistHD,H/O: heart diorder,icd9cm,396
+C0559157,HistHD,H/O: heart diorder,icd9cm,397
+C0559157,HistHD,H/O: heart diorder,icd9cm,402
+C0559157,HistHD,H/O: heart diorder,icd9cm,404
+C0559157,HistHD,H/O: heart diorder,icd9cm,412
+C0559157,HistHD,H/O: heart diorder,icd9cm,413
+C0559157,HistHD,H/O: heart diorder,icd9cm,414
+C0559157,HistHD,H/O: heart diorder,icd9cm,416.2
+C0559157,HistHD,H/O: heart diorder,icd9cm,416.8
+C0559157,HistHD,H/O: heart diorder,icd9cm,416.9
+C0559157,HistHD,H/O: heart diorder,icd9cm,428.22
+C0559157,HistHD,H/O: heart diorder,icd9cm,428.23
+C0559157,HistHD,H/O: heart diorder,icd9cm,428.32
+C0559157,HistHD,H/O: heart diorder,icd9cm,428.33
+C0559157,HistHD,H/O: heart diorder,icd9cm,428.42
+C0559157,HistHD,H/O: heart diorder,icd9cm,428.43
+C0559157,HistHD,H/O: heart diorder,icd9cm,745
+C0559157,HistHD,H/O: heart diorder,icd9cm,746
+C0559157,HistHD,H/O: heart diorder,icd9cm,648.5
+C0559157,HistHD,H/O: heart diorder,icd9cm,648.60
+C0559157,HistHD,H/O: heart diorder,icd9cm,648.61
+C0559157,HistHD,H/O: heart diorder,icd9cm,648.62
+C0559157,HistHD,H/O: heart diorder,icd9cm,648.63
+C0559157,HistHD,H/O: heart diorder,icd9cm,426
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.0
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.1
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.2
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.3
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.4
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.6
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.7
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.8
+C0559157,HistHD,H/O: heart diorder,icd9cm,427.9
+C0559157,HistHD,H/O: heart diorder,icd10cm,I05
+C0559157,HistHD,H/O: heart diorder,icd10cm,I06
+C0559157,HistHD,H/O: heart diorder,icd10cm,I07
+C0559157,HistHD,H/O: heart diorder,icd10cm,I08
+C0559157,HistHD,H/O: heart diorder,icd10cm,I09
+C0559157,HistHD,H/O: heart diorder,icd10cm,I11
+C0559157,HistHD,H/O: heart diorder,icd10cm,I12
+C0559157,HistHD,H/O: heart diorder,icd10cm,I13
+C0559157,HistHD,H/O: heart diorder,icd10cm,I20
+C0559157,HistHD,H/O: heart diorder,icd10cm,I25
+C0559157,HistHD,H/O: heart diorder,icd10cm,I27.8
+C0559157,HistHD,H/O: heart diorder,icd10cm,I31
+C0559157,HistHD,H/O: heart diorder,icd10cm,I32
+C0559157,HistHD,H/O: heart diorder,icd10cm,I34
+C0559157,HistHD,H/O: heart diorder,icd10cm,I35
+C0559157,HistHD,H/O: heart diorder,icd10cm,I36
+C0559157,HistHD,H/O: heart diorder,icd10cm,I37
+C0559157,HistHD,H/O: heart diorder,icd10cm,I38
+C0559157,HistHD,H/O: heart diorder,icd10cm,I39
+C0559157,HistHD,H/O: heart diorder,icd10cm,I44
+C0559157,HistHD,H/O: heart diorder,icd10cm,I45
+C0559157,HistHD,H/O: heart diorder,icd10cm,I47
+C0559157,HistHD,H/O: heart diorder,icd10cm,I48
+C0559157,HistHD,H/O: heart diorder,icd10cm,I49
+C0559157,HistHD,H/O: heart diorder,icd10cm,I50.22
+C0559157,HistHD,H/O: heart diorder,icd10cm,I50.32
+C0559157,HistHD,H/O: heart diorder,icd10cm,I50.33
+C0559157,HistHD,H/O: heart diorder,icd10cm,I50.42
+C0559157,HistHD,H/O: heart diorder,icd10cm,I50.43
+C0559157,HistHD,H/O: heart diorder,icd10cm,I50.812
+C0559157,HistHD,H/O: heart diorder,icd10cm,I50.813
+C0559157,HistHD,H/O: heart diorder,icd10cm,O10.1
+C0559157,HistHD,H/O: heart diorder,icd10cm,O10.3
+C0559157,HistHD,H/O: heart diorder,icd10cm,O99.41
+C0559157,HistHD,H/O: heart diorder,icd10cm,O99.42
+C0559157,HistHD,H/O: heart diorder,icd10cm,Q20
+C0559157,HistHD,H/O: heart diorder,icd10cm,Q21
+C0559157,HistHD,H/O: heart diorder,icd10cm,Q22
+C0559157,HistHD,H/O: heart diorder,icd10cm,Q23
+C0559157,HistHD,H/O: heart diorder,icd10cm,Q24
+C0001175,HIV,HIV/AIDS,icd9cm,042
+C0001175,HIV,HIV/AIDS,icd9cm,V08
+C0001175,HIV,HIV/AIDS,icd10cm,O98.7
+C0001175,HIV,HIV/AIDS,icd10cm,B20
+C0000832,PA,placental abruption,icd9cm,641.2
+C0000832,PA,placental abruption,icd10cm,O45
+C0455495,HistCD,H/O: coagulation defect,icd9cm,286.0
+C0455495,HistCD,H/O: coagulation defect,icd9cm,286.1
+C0455495,HistCD,H/O: coagulation defect,icd9cm,286.2
+C0455495,HistCD,H/O: coagulation defect,icd9cm,286.3
+C0455495,HistCD,H/O: coagulation defect,icd9cm,286.4
+C0455495,HistCD,H/O: coagulation defect,icd9cm,286.5
+C0455495,HistCD,H/O: coagulation defect,icd9cm,286.7
+C0455495,HistCD,H/O: coagulation defect,icd9cm,287
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D66
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D67
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D68.0
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D68.1
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D68.2
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D68.3
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D68.4
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D68.5
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D68.6
+C0455495,HistCD,H/O: coagulation defect,icd10cm,D69
+C0002871,HistANEM,history of anemia,icd9cm,280.0
+C0002871,HistANEM,history of anemia,icd9cm,280.1
+C0002871,HistANEM,history of anemia,icd9cm,280.9
+C0002871,HistANEM,history of anemia,icd9cm,285.9
+C0002871,HistANEM,history of anemia,icd9cm,280.8
+C0002871,HistANEM,history of anemia,icd9cm,281
+C0002871,HistANEM,history of anemia,icd9cm,282.0
+C0002871,HistANEM,history of anemia,icd9cm,282.1
+C0002871,HistANEM,history of anemia,icd9cm,282.3
+C0002871,HistANEM,history of anemia,icd9cm,282.40
+C0002871,HistANEM,history of anemia,icd9cm,282.41
+C0002871,HistANEM,history of anemia,icd9cm,282.43
+C0002871,HistANEM,history of anemia,icd9cm,282.44
+C0002871,HistANEM,history of anemia,icd9cm,282.45
+C0002871,HistANEM,history of anemia,icd9cm,282.46
+C0002871,HistANEM,history of anemia,icd9cm,282.47
+C0002871,HistANEM,history of anemia,icd9cm,282.49
+C0002871,HistANEM,history of anemia,icd9cm,282.5
+C0002871,HistANEM,history of anemia,icd9cm,282.60
+C0002871,HistANEM,history of anemia,icd9cm,282.61
+C0002871,HistANEM,history of anemia,icd9cm,282.63
+C0002871,HistANEM,history of anemia,icd9cm,282.68
+C0002871,HistANEM,history of anemia,icd9cm,282.7
+C0002871,HistANEM,history of anemia,icd9cm,282.8
+C0002871,HistANEM,history of anemia,icd9cm,282.9
+C0002871,HistANEM,history of anemia,icd9cm,284
+C0002871,HistANEM,history of anemia,icd9cm,285
+C0002871,HistANEM,history of anemia,icd9cm,648.20
+C0002871,HistANEM,history of anemia,icd9cm,648.21
+C0002871,HistANEM,history of anemia,icd9cm,648.22
+C0002871,HistANEM,history of anemia,icd9cm,628.23
+C0002871,HistANEM,history of anemia,icd10cm,O99.01
+C0002871,HistANEM,history of anemia,icd10cm,O99.02
+C0002871,HistANEM,history of anemia,icd10cm,D50
+C0002871,HistANEM,history of anemia,icd10cm,D51
+C0002871,HistANEM,history of anemia,icd10cm,D52
+C0002871,HistANEM,history of anemia,icd10cm,D53
+C0002871,HistANEM,history of anemia,icd10cm,D55
+C0002871,HistANEM,history of anemia,icd10cm,D56
+C0002871,HistANEM,history of anemia,icd10cm,D58
+C0002871,HistANEM,history of anemia,icd10cm,D59
+C0002871,HistANEM,history of anemia,icd10cm,D57.1
+C0002871,HistANEM,history of anemia,icd10cm,D57.20
+C0002871,HistANEM,history of anemia,icd10cm,D57.3
+C0002871,HistANEM,history of anemia,icd10cm,D57.40
+C0002871,HistANEM,history of anemia,icd10cm,D57.80
+C0002871,HistANEM,history of anemia,icd10cm,D64.9
+C0032989,MULTIPG,multiple pregnancy,icd9cm,651
+C0032989,MULTIPG,multiple pregnancy,icd9cm,V27.2
+C0032989,MULTIPG,multiple pregnancy,icd9cm,V27.3
+C0032989,MULTIPG,multiple pregnancy,icd9cm,V27.4
+C0032989,MULTIPG,multiple pregnancy,icd9cm,V27.5
+C0032989,MULTIPG,multiple pregnancy,icd9cm,V27.6
+C0032989,MULTIPG,multiple pregnancy,icd9cm,V27.7
+C0032989,MULTIPG,multiple pregnancy,icd10cm,O30
+C0032989,MULTIPG,multiple pregnancy,icd10cm,O31
+C0032989,MULTIPG,multiple pregnancy,icd10cm,O63.2
+C0032989,MULTIPG,multiple pregnancy,icd10cm,Z37.2
+C0032989,MULTIPG,multiple pregnancy,icd10cm,Z37.3
+C0032989,MULTIPG,multiple pregnancy,icd10cm,Z37.4
+C0032989,MULTIPG,multiple pregnancy,icd10cm,Z37.5
+C0032989,MULTIPG,multiple pregnancy,icd10cm,Z37.6
+C0032989,MULTIPG,multiple pregnancy,icd10cm,Z37.7
+C0022876,PTL,premature labor,icd9cm,644.21
+C0022876,PTL,premature labor,icd10cm,Z3A.2
+C0022876,PTL,premature labor,icd10cm,Z3A.30
+C0022876,PTL,premature labor,icd10cm,Z3A.31
+C0022876,PTL,premature labor,icd10cm,Z3A.32
+C0022876,PTL,premature labor,icd10cm,Z3A.33
+C0022876,PTL,premature labor,icd10cm,Z3A.34
+C0022876,PTL,premature labor,icd10cm,Z3A.35
+C0022876,PTL,premature labor,icd10cm,Z3A.36
+C0032046,PP,placenta previa,icd9cm,641.01
+C0032046,PP,placenta previa,icd9cm,641.11
+C0032046,PP,placenta previa,icd10cm,O44.03
+C0032046,PP,placenta previa,icd10cm,O44.13
+C0032046,PP,placenta previa,icd10cm,O44.23
+C0032046,PP,placenta previa,icd10cm,O44.33
+C0027868,NMD,neuromuscular disease/myoneural disorder,icd9cm,345
+C0027868,NMD,neuromuscular disease/myoneural disorder,icd9cm,358
+C0027868,NMD,neuromuscular disease/myoneural disorder,icd10cm,G40
+C0027868,NMD,neuromuscular disease/myoneural disorder,icd10cm,G70
+C0004096,ASTH,asthma,icd9cm,493
+C0004096,ASTH,asthma,icd10cm,O99.5
+C0004096,ASTH,asthma,icd10cm,J45.21
+C0004096,ASTH,asthma,icd10cm,J45.22
+C0004096,ASTH,asthma,icd10cm,J45.31
+C0004096,ASTH,asthma,icd10cm,J45.32
+C0004096,ASTH,asthma,icd10cm,J45.4
+C0004096,ASTH,asthma,icd10cm,J45.5
+C0004096,ASTH,asthma,icd10cm,J45.901
+C0004096,ASTH,asthma,icd10cm,J45.902
+C0004364,AID,autoimmune disease (including lupus),icd9cm,710
+C0004364,AID,autoimmune disease (including lupus),icd9cm,714
+C0004364,AID,autoimmune disease (including lupus),icd9cm,279.4
+C0004364,AID,autoimmune disease (including lupus),icd10cm,M30
+C0004364,AID,autoimmune disease (including lupus),icd10cm,M31
+C0004364,AID,autoimmune disease (including lupus),icd10cm,M32
+C0004364,AID,autoimmune disease (including lupus),icd10cm,M33
+C0004364,AID,autoimmune disease (including lupus),icd10cm,M34
+C0004364,AID,autoimmune disease (including lupus),icd10cm,M35
+C0004364,AID,autoimmune disease (including lupus),icd10cm,M36
+C0341872,UF,"uterine fibroids in pregnancy, childbirth and the puerperium",icd9cm,218
+C0341872,UF,"uterine fibroids in pregnancy, childbirth and the puerperium",icd9cm,654.1
+C0341872,UF,"uterine fibroids in pregnancy, childbirth and the puerperium",icd10cm,D25
+C0341872,UF,"uterine fibroids in pregnancy, childbirth and the puerperium",icd10cm,O34.1
+C0012242,GID,disorder of digestive system,icd9cm,539
+C0012242,GID,disorder of digestive system,icd9cm,555
+C0012242,GID,disorder of digestive system,icd9cm,556
+C0012242,GID,disorder of digestive system,icd9cm,557
+C0012242,GID,disorder of digestive system,icd9cm,558
+C0012242,GID,disorder of digestive system,icd9cm,570
+C0012242,GID,disorder of digestive system,icd9cm,571
+C0012242,GID,disorder of digestive system,icd9cm,572
+C0012242,GID,disorder of digestive system,icd9cm,573
+C0012242,GID,disorder of digestive system,icd9cm,574
+C0012242,GID,disorder of digestive system,icd9cm,575
+C0012242,GID,disorder of digestive system,icd9cm,576
+C0012242,GID,disorder of digestive system,icd9cm,577
+C0012242,GID,disorder of digestive system,icd9cm,578
+C0012242,GID,disorder of digestive system,icd9cm,579
+C0012242,GID,disorder of digestive system,icd9cm,564
+C0012242,GID,disorder of digestive system,icd9cm,646.7
+C0012242,GID,disorder of digestive system,icd10cm,K50
+C0012242,GID,disorder of digestive system,icd10cm,K51
+C0012242,GID,disorder of digestive system,icd10cm,K52
+C0012242,GID,disorder of digestive system,icd10cm,K70
+C0012242,GID,disorder of digestive system,icd10cm,K71
+C0012242,GID,disorder of digestive system,icd10cm,K72
+C0012242,GID,disorder of digestive system,icd10cm,K73
+C0012242,GID,disorder of digestive system,icd10cm,K74
+C0012242,GID,disorder of digestive system,icd10cm,K75
+C0012242,GID,disorder of digestive system,icd10cm,K76
+C0012242,GID,disorder of digestive system,icd10cm,K77
+C0012242,GID,disorder of digestive system,icd10cm,K80
+C0012242,GID,disorder of digestive system,icd10cm,K81
+C0012242,GID,disorder of digestive system,icd10cm,K82
+C0012242,GID,disorder of digestive system,icd10cm,K83
+C0012242,GID,disorder of digestive system,icd10cm,K85
+C0012242,GID,disorder of digestive system,icd10cm,K86
+C0012242,GID,disorder of digestive system,icd10cm,K87
+C0012242,GID,disorder of digestive system,icd10cm,K94
+C0012242,GID,disorder of digestive system,icd10cm,K95
+C0012242,GID,disorder of digestive system,icd10cm,O26.6
+C0269629,CH,chronic hypertension in obstetric context,icd9cm,401
+C0269629,CH,chronic hypertension in obstetric context,icd9cm,642.0
+C0269629,CH,chronic hypertension in obstetric context,icd9cm,642.7
+C0269629,CH,chronic hypertension in obstetric context,icd10cm,O10.0
+C0269629,CH,chronic hypertension in obstetric context,icd10cm,O11
+C0269629,CH,chronic hypertension in obstetric context,icd10cm,I10
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,295
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,296
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,297
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,298
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,300.0
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,300.21
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,300.22
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,300.4
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,301
+C0455498,HistPD,H/O: psychiatric disorder,icd9cm,309
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F06
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F20
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F21
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F22
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F23
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F24
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F25
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F28
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F29
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F30
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F31
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F32
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F33
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F34
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F39
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F40.0
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F41
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F43
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F53
+C0455498,HistPD,H/O: psychiatric disorder,icd10cm,F60
+C0011849,HistDM,H/O: diabetes mellitus,icd9cm,250
+C0011849,HistDM,H/O: diabetes mellitus,icd9cm,648.0
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,E08
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,E09
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,E10
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,E11
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,E12
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,E13
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,O24.0
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,O24.1
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,O24.3
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,O24.8
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,O24.9
+C0011849,HistDM,H/O: diabetes mellitus,icd10cm,Z79.4
+C0040156,THYRO,thyrotoxicosis,icd9cm,242
+C0040156,THYRO,thyrotoxicosis,icd10cm,E05
+C0475172,HistCSEC,past pregnancy history of cesarean section,icd9cm,654.2
+C0475172,HistCSEC,past pregnancy history of cesarean section,icd10cm,O34.21
+C0475172,HistCSEC,past pregnancy history of cesarean section,icd10cm,O66.41
+C0085207,GDM,gestational diabetes mellitus,icd9cm,648.8
+C0085207,GDM,gestational diabetes mellitus,icd10cm,O24.4
+C0151744,IHD,ischemic heart disease,icd9cm,410
+C0151744,IHD,ischemic heart disease,icd9cm,411
+C0151744,IHD,ischemic heart disease,icd9cm,412
+C0151744,IHD,ischemic heart disease,icd9cm,413
+C0151744,IHD,ischemic heart disease,icd9cm,414
+C0151744,IHD,ischemic heart disease,icd10cm,I20
+C0151744,IHD,ischemic heart disease,icd10cm,I21
+C0151744,IHD,ischemic heart disease,icd10cm,I22
+C0151744,IHD,ischemic heart disease,icd10cm,I23
+C0151744,IHD,ischemic heart disease,icd10cm,I24
+C0151744,IHD,ischemic heart disease,icd10cm,I25
+C0003811,ARRY,cardiac arrhythmia,icd9cm,427
+C0003811,ARRY,cardiac arrhythmia,icd10cm,I46
+C0003811,ARRY,cardiac arrhythmia,icd10cm,I47
+C0003811,ARRY,cardiac arrhythmia,icd10cm,I48
+C0003811,ARRY,cardiac arrhythmia,icd10cm,I49
+C0003811,CHF,congestive heart failure,icd9cm,428
+C0003811,CHF,congestive heart failure,icd10cm,I50
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd9cm,745
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd9cm,746
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd9cm,747
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q20
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q21
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q22
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q23
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q24
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q25
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q26
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q27
+C0152021,CHD,congenital heart disease (including congenital valvular insufficiency),icd10cm,Q28
+C0003873,RA,rheumatoid arthritis,icd9cm,714.0
+C0003873,RA,rheumatoid arthritis,icd10cm,714.0
+C0003873,RA,rheumatoid arthritis,icd10cm,M05
+C0003873,RA,rheumatoid arthritis,icd10cm,M06
+C0003873,RA,rheumatoid arthritis,icd10cm,M08
+C0085096,PVD,peripheral vascular disease,icd9cm,440
+C0085096,PVD,peripheral vascular disease,icd9cm,441
+C0085096,PVD,peripheral vascular disease,icd9cm,442
+C0085096,PVD,peripheral vascular disease,icd9cm,443
+C0085096,PVD,peripheral vascular disease,icd9cm,444
+C0085096,PVD,peripheral vascular disease,icd9cm,445
+C0085096,PVD,peripheral vascular disease,icd9cm,446
+C0085096,PVD,peripheral vascular disease,icd9cm,447
+C0085096,PVD,peripheral vascular disease,icd9cm,448
+C0085096,PVD,peripheral vascular disease,icd9cm,449
+C0085096,PVD,peripheral vascular disease,icd10cm,I70
+C0085096,PVD,peripheral vascular disease,icd10cm,I71
+C0085096,PVD,peripheral vascular disease,icd10cm,I72
+C0085096,PVD,peripheral vascular disease,icd10cm,I73
+C0085096,PVD,peripheral vascular disease,icd10cm,I74
+C0085096,PVD,peripheral vascular disease,icd10cm,I75
+C0085096,PVD,peripheral vascular disease,icd10cm,I76
+C0085096,PVD,peripheral vascular disease,icd10cm,I77
+C0085096,PVD,peripheral vascular disease,icd10cm,I78
+C0085096,PVD,peripheral vascular disease,icd10cm,I79
+C0014544,EPI,epilepsy,icd9cm,345
+C0014544,EPI,epilepsy,icd10cm,G40
+C0007820,CVD,cerebrovascular disease,icd9cm,430
+C0007820,CVD,cerebrovascular disease,icd9cm,431
+C0007820,CVD,cerebrovascular disease,icd9cm,432
+C0007820,CVD,cerebrovascular disease,icd9cm,433
+C0007820,CVD,cerebrovascular disease,icd9cm,434
+C0007820,CVD,cerebrovascular disease,icd9cm,435
+C0007820,CVD,cerebrovascular disease,icd9cm,436
+C0007820,CVD,cerebrovascular disease,icd9cm,437
+C0007820,CVD,cerebrovascular disease,icd9cm,438
+C0007820,CVD,cerebrovascular disease,icd10cm,I60
+C0007820,CVD,cerebrovascular disease,icd10cm,I61
+C0007820,CVD,cerebrovascular disease,icd10cm,I62
+C0007820,CVD,cerebrovascular disease,icd10cm,I63
+C0007820,CVD,cerebrovascular disease,icd10cm,I64
+C0007820,CVD,cerebrovascular disease,icd10cm,I65
+C0007820,CVD,cerebrovascular disease,icd10cm,I66
+C0007820,CVD,cerebrovascular disease,icd10cm,I67
+C0007820,CVD,cerebrovascular disease,icd10cm,I68
+C0007820,CVD,cerebrovascular disease,icd10cm,I69
+C0002895,SCD,sickle cell-hemoglobin SS disease,icd9cm,282.6
+C0002895,SCD,sickle cell-hemoglobin SS disease,icd10cm,D57
+C0740858,SUD,substance abuse/substance use disorder,icd9cm,304
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F11
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F12
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F13
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F14
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F15
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F16
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F17
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F18
+C0740858,SUD,substance abuse/substance use disorder,icd10cm,F19
+C0001973,AUD,alcohol dependence,icd9cm,303
+C0001973,AUD,alcohol dependence,icd10cm,F10
+C5203670,COVID,COVID-19,icd10cm,U07.1
