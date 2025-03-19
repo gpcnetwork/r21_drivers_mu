@@ -55,7 +55,7 @@ destbl %>%
   kable_paper(full_width = F)
 ```
 
-The table below reports column-wise (col_p1,col_p0) and row-wise (row_p1, row_p0) percentages stratified SMM status, \`SMMANY_IND\`:
+Besides the basic demogrphic and facility-level information, we have also included [20 obstetric comorbidity indicators](https://github.com/gpcnetwork/r21_drivers_mu/blob/main/ref/OBCMI_ICD.csv) based on those defined in [OBCMI](https://www.cmqcc.org/research/severe-maternal-morbidity/obstetric-comorbidity-scoring-system). The table below reports column-wise (col_p1,col_p0) and row-wise (row_p1, row_p0) percentages stratified SMM status, \`SMMANY_IND\`:
 
 ```{r}
 #| label: stratified-summary
@@ -99,7 +99,7 @@ strtbl %>%
   kable_paper(full_width = F)
 ```
 
-## Univariable Lasso Regression
+## Univariable Logistic Regression
 
 The following table summarized univariate lasso regression results with `SMMANY_IND` as the outcome:
 
@@ -128,7 +128,7 @@ unireg %>%
   kable_paper(full_width = F)
 ```
 
-## Multiple Lasso Regression Coefficients
+## Multiple Lasso Logistic Regression Coefficients
 
 The following table summarized multiple lasso regression results with `SMMANY_IND` as the outcome and a restricted list of covariates:
 

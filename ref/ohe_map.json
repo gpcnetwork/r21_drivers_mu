@@ -53,8 +53,13 @@
     "8": "8",
     "9": "9"
   },
-"delivery_type": {
-    "0": "C-secion", 
-    "1": "Vaginal"
+  "zip_code_region": {
+    "0": "MW", 
+    "1": "NE", 
+    "2": "S", 
+    "3": "W"},
+  "delivery_type": {
+    "0": "cSection", 
+    "1": "vaginalDelivery"
   }
 }

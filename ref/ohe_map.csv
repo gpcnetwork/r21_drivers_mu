@@ -43,5 +43,8 @@ zip_code_region_ohe,0,Midwest
 zip_code_region_ohe,1,Northeast
 zip_code_region_ohe,2,South
 zip_code_region_ohe,3,West
-delivery_type_ohe,1,vaginalDelivery
-delivery_type_ohe,0,cSection
+delivery_type_ohe,0,vaginalDelivery
+delivery_type_ohe,1,cSection
+
+
+
